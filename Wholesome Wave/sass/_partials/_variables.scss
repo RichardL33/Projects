@@ -1,0 +1,29 @@
+// _VARIABLES.SCSS
+
+
+
+// FONTS
+
+//font-face($name, $font-files, [$eot], [$weight], [$style])
+
+@include font-face("Kalinga", font-files("Kalinga/Kalinga.woff", "Kalinga/Kalinga.ttf", "Kalinga/Kalinga.svg"), "Kalinga/Kalinga.eot");
+@include font-face("Kalinga-Bold", font-files("Kalinga-Bold/Kalinga-Bold.woff", "Kalinga-Bold/Kalinga-Bold.ttf", "Kalinga-Bold/Kalinga-Bold.svg"), "Kalinga-Bold/Kalinga-Bold.eot");
+@include font-face("KlinicSlab-Medium", font-files("KlinicSlab-Medium/KlinicSlab-Medium.woff", "KlinicSlab-Medium/KlinicSlab-Medium.ttf", "KlinicSlab-Medium/KlinicSlab-Medium.svg"), "KlinicSlab-Medium/KlinicSlab-Medium.eot");
+@include font-face("KlinicSlab-Light", font-files("KlinicSlab-Light/KlinicSlab-Light.woff", "KlinicSlab-Light/KlinicSlab-Light.ttf", "KlinicSlab-Light/KlinicSlab-Light.svg"), "KlinicSlab-Light/KlinicSlab-Light.eot");
+@include font-face("KlinicSlab-LightItalic", font-files("KlinicSlab-LightItalic/KlinicSlab-LightItalic.woff", "KlinicSlab-LightItalic/KlinicSlab-LightItalic.ttf", "KlinicSlab-LightItalic/KlinicSlab-LightItalic.svg"), "KlinicSlab-LightItalic/KlinicSlab-LightItalic.eot");
+@include font-face("OstrichSansRounded-Medium", font-files("OstrichSansRounded-Medium/OstrichSansRounded-Medium.woff", "OstrichSansRounded-Medium/OstrichSansRounded-Medium.ttf", "OstrichSansRounded-Medium/OstrichSansRounded-Medium.svg"), "OstrichSansRounded-Medium/OstrichSansRounded-Medium.eot");
+
+@import url();
+
+$h1: '';
+$p: '';
+
+// BODY COLOR STYLES
+
+$main-color: #FFF;
+
+// BUTTONS
+
+
+
+

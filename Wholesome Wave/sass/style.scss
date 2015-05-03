@@ -1,0 +1,765 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/utilities";
+@import "normalize";
+@import "breakpoint";
+@import "_partials/_breakpoints.scss";
+@import "_partials/variables.scss";
+@import "_partials/mixins.scss";
+@import "_partials/typography.scss";
+
+$legacy-support-for-ie: false;
+$legacy-support-for-mozilla: false;
+
+* {
+	@include box-sizing(border-box);
+
+	// <-- GHOST CSS -->
+	// background: #000 !important;
+	// color: #0f0 !important;
+	// outline: solid #f00 1px !important;
+}
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+		line-height: 1.25em;
+		font-family: Kalinga, Helvetica, Arial;
+		font-size: 18px; 
+		background: #f9f9f9;
+		color: #f6f7f9;
+}
+
+section,
+div {
+	@extend %clearfix;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.25s ease; 
+	-moz-transition: all 0.25s ease; 
+	-ms-transition: all 0.25s ease; 
+	-o-transition: all 0.25s ease; 
+	transition: all 0.25s ease; 
+	color: #f6f7f9;
+	text-decoration: none;
+	font-weight: bold;
+	font-family:'FontAwesome';
+}
+
+input::-webkit-input-placeholder {
+   color: #C8D572;
+}
+
+// button {
+// 	// background-color: #ef3f37;
+// 	color: #FFF; 
+// 	border-top: 100px solid red;
+// 	border-left: 50px solid transparent;
+// 	border-right: 50px solid transparent;
+// 	height: 0;
+// 	width: 100px;
+// }
+
+button {  // the one that consistently works
+  position: relative;
+  border: 0;
+  outline: 0;
+  height: 50px;
+  text-transform: uppercase;
+  color:white;
+  background: #ef3f37;
+  transition: background 0.25s ease;
+  &:before {
+	position: absolute;
+	content: "";
+	left: -20px;
+	width: 0px;
+	height: 0px;
+	bottom: 0px;
+	border-bottom: 50px solid transparent;
+	border-right: 20px solid #ef3f37;
+	transition: border 0.25s ease;
+  }
+  &:after {
+    position: absolute;
+	content: "";
+	right: -20px;
+	width: 0px;
+	height: 0px;
+	bottom: 0;
+	border-bottom: 50px solid transparent;
+	border-left: 20px solid #ef3f37;
+	transition: border 0.25s ease;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  &:hover,
+  &:hover:before {
+    // background: red;
+  }
+  &:hover:after {
+    // border-left: 20px solid red;
+  }
+}
+
+.btn_wrapper {
+	position: relative;
+	width: 40%;
+	margin: 35px auto 80px;
+	@media screen and (min-width: 600px) {
+		margin: 0;
+	}
+	.btn_rest {
+		-webkit-transition: all 0.25s ease; 
+		-moz-transition: all 0.25s ease; 
+		-ms-transition: all 0.25s ease; 
+		-o-transition: all 0.25s ease; 
+		transition: all 0.25s ease; 
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: 2;
+		&:hover {
+			opacity: 0;
+		}
+	}
+	.btn_active {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		z-index: 1;
+		opacity: 0;
+	}
+}
+
+.btn_rest:hover + .btn_active {
+	opacity: 1;
+}
+
+#donate_wrap {
+	@media screen and (min-width: 600px) {
+		position: absolute;
+		bottom: 100px;
+		right: 310px;
+	}
+}
+
+#submit_wrap {
+	@media screen and (min-width: 600px) {
+		position: absolute;
+		bottom: 60px;
+		right: 125px;
+	}
+	#submit_btn {
+		@media screen and (min-width: 600px) {
+			width: 30%;
+		}
+	}
+	#submit_hover {
+		@media screen and (min-width: 600px) {
+			width: 30%;
+		}	
+	}
+}
+
+header {
+	background-color: #0f2c3a;
+	width: 100%;
+	height: 100px;
+	z-index: 100;
+	@media screen and (min-width: 600px) {
+		position: absolute;
+		top: 360px;   
+	}  
+	nav {
+		ul { 
+			display: none;
+			background-color: #0f2c3a;
+			position: absolute;
+			top: 100px;
+			width: 100%;
+			text-align: center;
+			@media screen and (min-width: 600px) {
+				display: block !important; 
+				text-align: left;
+				position: initial;   
+			} 
+			li {
+				padding: 10px 0;
+				border-bottom: 1px solid #f6f7f9;
+				@media screen and (min-width: 600px) {
+					display: inline-block;
+					padding: 0;
+					border: none;
+				}
+				a {
+					font-size: 1.65em;
+					font-family: KlinicSlab-LightItalic;
+						@media screen and (min-width: 600px) {
+						font-size: 1.225em; 
+						-webkit-font-smoothing: antialiased;
+					} 
+				} 
+			} 
+		}
+	}
+
+	#logo {
+		float: left;
+		margin-top: 4px;
+		min-width: 113px;
+		max-width: 133px;   
+		width: 35%;
+		@media screen and (min-width: 600px) {
+			float: right;
+			margin-top: 32px; 
+		} 
+	}
+
+	#menu-icon {
+		background-color: #444;
+		border-radius: 4px 4px;
+		float: right;
+		margin: 11px;
+		max-width: 40px;  
+		width: 6%;
+		min-width: 40px;
+		&:hover {
+			background-color: #4C9CF1;
+			border-radius: 4px 4px;
+		} 
+		@media screen and (min-width: 600px) {
+			display: none;  
+		} 
+	} 
+}
+
+// #family_hero {
+// 	display: none;
+// 	@media screen and (min-width: 600px) {
+// 		display: block;
+// 		position: fixed;
+// 		top: 0;
+// 		left: 0;
+// 		min-width: 100%;
+// 		min-height: 100%;
+// 	}
+// }
+
+.large_container {
+	width: 100%; 
+	// max-width: 906px;
+	// min-width: 599px;  
+	margin: 0 auto;
+	background: url(../img/family_portrait.jpg) no-repeat center center;  
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	height: 360px; 
+	@media screen and (min-width: 600px) {
+		height: 490px;
+		-webkit-background-size: 100%;
+		-moz-background-size: 100%;
+		-o-background-size: 100%;
+		background-size: 100%;	
+		background-position: top center;
+	}	
+}
+
+.inner_container {
+	p {
+		font-family: Kalinga, Helvetica, Arial;
+		font-size: 18px;  
+	}
+	@media screen and (min-width: 600px) {
+			display: block;
+			max-width: 876px; 
+			margin: 0 auto; 
+			position: relative;
+		}
+}
+
+.mission_box {
+	background-color: #C8D572; 
+	position: relative;
+	padding: 15px;
+	text-align: center;  
+	// top: 360px;
+	margin-top: 360px;
+	&:after {
+		content:"";
+		  position:absolute;
+		  bottom:-60px; /* value = - border-top-width - border-bottom-width */
+		  left: 50px; /* controls horizontal position */
+		  border-width: 60px 60px 0 0; /* vary these values to change the angle of the vertex */
+		  border-style:solid;
+		  border-color: #C8D572 transparent;
+		  /* reduce the damage in FF3.0 */
+		  display:block;
+		  width:0;
+	}
+	@media screen and (min-width: 600px) {
+			position: absolute;
+			top: 520px;
+			left: -35px;
+			max-width: 635px;
+			z-index: 10;
+			margin-top: 0;
+			padding: 20px 10px;
+		}
+	h1 {
+		font-family: KlinicSlab-Light, Helvetica, Arial;
+		font-size: 45px;
+		@media screen and (min-width: 600px) {
+			-webkit-font-smoothing: antialiased;
+			line-height: 52px;
+		    font-size: 3.651875em;
+		    margin: 20px 0 0 0;
+		}  
+	} 
+	p {
+		color: #0e2c3a;
+		max-width: 520px;
+		margin: 0 auto; 
+		@media screen and (min-width: 600px) {
+			-webkit-font-smoothing: antialiased;
+			font-size: 1.05em;
+			line-height: 24px;
+			padding-top: 5px;
+		} 
+	}
+	button {
+		margin: 20px 0;
+		text-transform: uppercase; 
+	}
+	.mission_left {
+		@media screen and (min-width: 600px) {
+			float: left;
+			vertical-align: top;
+			width: 50%;
+			text-align: right;
+			padding-right: 20px;
+		}
+	}
+	.mission_right {
+		@media screen and (min-width: 600px) {
+			float: right;
+			vertical-align: top;
+			width: 50%;
+			text-align: left;
+			padding-left: 20px;
+			border-left: 5px solid #0e2c3a;
+		}
+	}
+}
+
+.signup_box {
+	background-color: #0e2c3a; 
+	position: relative; 
+	padding: 15px;
+	text-align: center;  
+	// top: 360px;
+	&:after {
+		content:"";
+		  position:absolute;
+		  bottom:-60px; /* value = - border-top-width - border-bottom-width */
+		  right: 50px; /* controls horizontal position */
+		  border-width: 60px 0 0 60px; /* vary these values to change the angle of the vertex */
+		  border-style:solid;
+		  border-color: #0e2c3a transparent;
+		  /* reduce the damage in FF3.0 */
+		  display:block;
+		  width:0;
+	}
+	@media screen and (min-width: 600px) {
+			position: absolute;
+			top: 705px;
+			right: -35px;
+			max-width: 635px;
+			text-align: left;
+			z-index: 5;
+			padding-top: 125px;
+		}
+	h2 {
+		font-family: OstrichSansRounded-Medium, Helvetica, Arial;
+		font-size: 48px;
+		color: #EF4137; 
+		margin-top: 30px;
+		@media screen and (min-width: 600px) {
+			margin-top: 10px;
+		} 
+	}
+	p {
+		color: #FFF;
+		padding: 20px 0;
+		max-width: 360px;
+		margin: 0 auto; 
+		@media screen and (min-width: 600px) {
+			margin: 0 0;
+			width: 85%;
+			float: right;
+		}    
+	}
+	input {
+		border: none;
+		-webkit-border-radius: 4px; 
+		 border-radius: 4px; 
+		margin-bottom: 10px;
+		width: 100%;
+		max-width: 450px; 
+		padding: 10px 0 10px 10px;
+		font-family: Kalinga, Helvetica, Arial; 
+		color: #0e2c3a; 
+		@media screen and (min-width: 600px) {
+			padding: 0 0 0 10px;
+			width: 67%;
+			max-width: 185px;
+		}
+	}
+	input:last-child {
+		@media screen and (min-width: 600px) {
+			width: 90%;
+			max-width: 90%;
+		}
+	}
+	button {
+		margin: 20px 0;
+		text-transform: uppercase;
+	}
+	.signup_left {
+		@media screen and (min-width: 600px) {
+			float: left;
+			vertical-align: top;
+			width: 50%;
+			text-align: right;
+			padding-right: 20px;
+		}
+	}
+	.signup_right {
+		@media screen and (min-width: 600px) {
+			float: right;
+			vertical-align: top;
+			width: 50%;
+			text-align: left;
+			padding-left: 20px;
+			padding-bottom: 50px;
+			border-left: 5px solid #C8D572;
+		}
+	}
+}
+
+.sec_1 {
+	@media screen and (min-width: 600px) {
+		height: 985px;
+	}
+}
+
+.sec_2 {
+	@media screen and (min-width: 600px) {
+		position: relative;
+		height: 410px;
+	}
+	#family_gallery {
+		width: 100%; 
+		@media screen and (min-width: 600px) {
+			display: none;
+		}
+	}
+	.circle_pics {
+		display: none;
+		@media screen and (min-width: 600px) {
+			display: block;
+			position: absolute;
+			max-width: 598px;
+			width: 25%;
+		}
+	}
+	#circle4 {
+		display: none;
+		@media screen and (min-width: 600px) {
+			display: block;
+			top: 100px;
+			left: 40%;
+			z-index: 100;
+			-webkit-transform: scale(2);
+			   -moz-transform: scale(2);
+			    -ms-transform: scale(2);
+			     -o-transform: scale(2);
+			        transform: scale(2);
+		}
+	}
+	#circle3 {
+		display: none;
+		@media screen and (min-width: 600px) {
+			display: block;
+			top: 50px;
+			right: 7%;
+			z-index: 75;
+			-webkit-transform: scale(1);
+			   -moz-transform: scale(1);
+			    -ms-transform: scale(1);
+			     -o-transform: scale(1);
+			        transform: scale(1);
+		}
+	}
+	#circle2 {
+		display: none;
+		@media screen and (min-width: 600px) {
+			display: block;
+			top: 150px;
+			left: 12%;
+			z-index: 50;
+			-webkit-transform: scale(1);
+			   -moz-transform: scale(1);
+			    -ms-transform: scale(1);
+			     -o-transform: scale(1);
+			        transform: scale(1);
+		}
+	}
+	#circle1 {
+		display: none;
+		@media screen and (min-width: 600px) {
+			display: block;
+			top: 50px;
+			right: 40%;
+			z-index: 25;
+			-webkit-transform: scale(1);
+			   -moz-transform: scale(1);
+			    -ms-transform: scale(1);
+			     -o-transform: scale(1);
+			        transform: scale(1);
+		}
+	}
+	.nav_arrows {
+		position: absolute;
+		bottom: 160px;
+		-webkit-border-radius: 50%;
+		        border-radius: 50%;
+		width: 10%;
+		z-index: 100;
+		background-color: #C8D572;
+		&:hover {
+			background-color: #f03f37;
+		}
+	}
+	#right_arrow {
+		right: -15px;
+	}
+	#left_arrow {
+		left: -15px;
+	}
+}
+
+footer {
+	background-color: #C8D572;
+	padding: 30px 0 20px 0;
+	width: 100%;
+	@media screen and (min-width: 600px) {
+		background-color: #0f2c3a;
+		position: relative;
+		bottom: 0;
+		padding-top: 75px;
+	} 
+	nav {
+		#footer_nav {
+			display: none;
+			@media screen and (min-width: 600px) {
+				display: block;
+				float: left;
+				width: 66%;
+			}
+			li {
+				display: inline-block;
+				padding-right: 115px;
+				line-height: 40px;
+				a {
+					font-family: Kalinga;
+					font-size: 1em;
+					&:hover {
+						color: #F03F37;
+					}
+				}
+			}
+		}
+		#social_nav {
+			text-align: center;
+			@media screen and (min-width: 600px) {
+				text-align: right;
+			}
+			li {
+				display: inline-block;
+				padding-right: 50px;
+				@media screen and (min-width: 600px) {
+					display: block;
+					padding-right: 0;
+					margin-bottom: 25px;
+				} 
+				a {
+					font-size: 40px;
+					&:hover {
+						color: #0e2c3a; 
+					}
+					@media screen and (min-width: 600px) {
+						font-size: 20px;
+						color: #4A4646;
+					}  
+				}
+			}
+			.circle{
+				@media screen and (min-width: 600px) {
+					border-radius: 50%;
+					// margin: 0.15em;
+					// font-size: 3em;
+					background-color: #C8D572;
+					&:hover {
+						background-color: #f03f37;
+					}
+				}
+			}
+			.fa-facebook-f {
+				padding: 10px 15px 10px 15px;
+			}
+			.fa-twitter {
+				padding: 11px 13px 11px 13px;
+			}
+			.fa-instagram {
+				padding: 11px 13px 11px 13px;
+			}
+		}
+	} 
+	.privacy_policy {
+		a {
+			@media screen and (min-width: 600px) {
+				margin: 0 auto;
+				text-align: center;
+				font-family: Gill Sans MT,Gill Sans,Calibri,sans-serif;
+				color: #3a535f;
+				font-size: 0.945em;
+			}
+		}
+	}
+}
+
+#social_nav li:last-of-type {
+		padding-right: 0; 
+	} 
+
+// header {
+// 	background: #0f2c3a;
+// 	width: 100%;
+// 	height: 115px;
+// 	// position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	z-index: 100;
+// 	nav {
+// 		// float: right;
+// 		width: 100%; 
+// 	}
+// 	ul {
+// 		list-style: none;
+// 		display: block !important; 
+// 	}
+
+// 	li {
+// 		display: inline-block;
+// 		padding: 10px
+// 	}
+// }
+
+// #logo{
+// 	margin-top: 10px; 
+// 	margin-left: 10px; 
+// 	float: left;
+// 	width: 35%;
+// 	height: 93px;
+// 	min-width: 140px; 
+// 	background: url(../img/logo.png) no-repeat center;
+// 	display: block;
+// }
+
+// #menu-icon {
+// 	display: none;
+// 	float: right;
+// 	width: 40px;
+// 	height: 40px;
+// 	background: #4C8FEC url(../img/menu_icon.png) center;
+// 	background-color: #444;
+// 	border-radius: 4px 4px; 
+// 	margin: 10px;
+// 	&:hover {
+// 		background-color: #4C9CF1;
+// 		border-radius: 4px 4px;
+// 	}
+// }
+
+// .current {
+// 	color: #c9d772;
+// }
+
+// .inner_container {
+// 	background: url(../img/family_portrait.jpg) no-repeat center center fixed; 
+// 	-webkit-background-size: contain;
+//   	-moz-background-size: contain;
+//   	-o-background-size: contain;
+//   	background-size: contain;
+// 	height: 200px; 
+// }
+
+// /* MEDIA QUERY */
+
+// @media screen and (max-width: 640px) {
+
+// 	header {
+// 		position: absolute;
+// 	}
+
+// 	#menu-icon {
+// 		display: inline-block;
+// 	}
+
+// 	nav {
+// 		float: right;
+// 		display: none;
+// 	}
+
+// 	nav ul, 
+// 	nav:active ul { 
+// 		display: none;
+// 		margin-top: 12px; 
+// 		padding: 20px;
+// 		background: #0f2c3a;
+// 		width: 100%;
+// 	}
+
+// 	nav li {
+// 		text-align: center;
+// 		width: 100%;
+// 		margin: 0;
+
+// 	}
+
+// 	nav:hover ul {
+// 		display: block;
+// 	}
+// }
