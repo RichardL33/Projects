@@ -1,0 +1,46 @@
+/**
+ * Style Template: 
+ * Created by RichardL33
+ * Date: 00/00/15
+ */
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/utilities";
+@import "normalize";
+@import "breakpoint";
+@import "_partials/_breakpoints.scss";
+@import "_partials/variables.scss";
+@import "_partials/mixins.scss";
+@import "_partials/typography.scss";
+
+$legacy-support-for-ie: false;
+$legacy-support-for-mozilla: false;
+
+* {
+@include box-sizing(border-box);
+
+	// <-- GHOST CSS -->
+	// background: #000 !important;
+	// color: #0f0 !important;
+	// outline: solid #f00 1px !important;
+
+}
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+div,
+section {
+	@extend %clearfix;
+}
+
+a {
+	text-decoration: none;
+}
