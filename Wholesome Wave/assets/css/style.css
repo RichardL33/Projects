@@ -391,6 +391,11 @@ button {
   #submit_wrap #submit_hover {
     width: 30%; } }
 
+#header_social_nav li {
+  margin-bottom: 25px; }
+#header_social_nav :first-of-type {
+  margin-top: 25px; }
+
 header {
   background-color: #0f2c3a;
   width: 100%;
@@ -418,7 +423,7 @@ header {
       @media screen and (min-width: 600px) {
         header nav ul li {
           display: inline-block;
-          padding: 0;
+          padding: 35px 0 0 0;
           border: none; } }
       header nav ul li a {
         font-size: 1.65em;
@@ -426,7 +431,19 @@ header {
         @media screen and (min-width: 600px) {
           header nav ul li a {
             font-size: 1.225em;
-            -webkit-font-smoothing: antialiased; } }
+            -webkit-font-smoothing: antialiased;
+            padding: 20px 40px; }
+            header nav ul li a:hover {
+              background: url("../img/nav_hover.png") no-repeat;
+              border: 0;
+              background-size: 100% 100%; } }
+    header nav ul .slant {
+      border: 1px solid white;
+      -webkit-transform: rotate(-33deg);
+      -moz-transform: rotate(-33deg);
+      -ms-transform: rotate(-33deg);
+      -o-transform: rotate(-33deg);
+      transform: rotate(-33deg); }
   header #logo {
     float: left;
     margin-top: 4px;
@@ -435,8 +452,9 @@ header {
     width: 35%; }
     @media screen and (min-width: 600px) {
       header #logo {
+        max-width: 194px;
         float: right;
-        margin-top: 32px; } }
+        margin-top: -25px; } }
   header #menu-icon {
     background-color: #444;
     border-radius: 4px 4px;
@@ -706,15 +724,19 @@ header {
       -o-transform: scale(1);
       transform: scale(1); } }
 .sec_2 .nav_arrows {
-  position: absolute;
-  bottom: 160px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  width: 10%;
-  z-index: 100;
-  background-color: #C8D572; }
-  .sec_2 .nav_arrows:hover {
-    background-color: #f03f37; }
+  display: none; }
+  @media screen and (min-width: 600px) {
+    .sec_2 .nav_arrows {
+      display: block;
+      position: absolute;
+      bottom: 160px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      width: 10%;
+      z-index: 100;
+      background-color: #C8D572; }
+      .sec_2 .nav_arrows:hover {
+        background-color: #f03f37; } }
 .sec_2 #right_arrow {
   right: -15px; }
 .sec_2 #left_arrow {
@@ -746,46 +768,55 @@ footer {
         font-size: 1em; }
         footer nav #footer_nav li a:hover {
           color: #F03F37; }
-  footer nav #social_nav {
+  footer nav #footer_social_nav {
     text-align: center; }
     @media screen and (min-width: 600px) {
-      footer nav #social_nav {
+      footer nav #footer_social_nav {
         text-align: right; } }
-    footer nav #social_nav li {
+    footer nav #footer_social_nav li {
       display: inline-block;
       padding-right: 50px; }
       @media screen and (min-width: 600px) {
-        footer nav #social_nav li {
+        footer nav #footer_social_nav li {
           display: block;
           padding-right: 0;
           margin-bottom: 25px; } }
-      footer nav #social_nav li a {
+      footer nav #footer_social_nav li a {
         font-size: 40px; }
-        footer nav #social_nav li a:hover {
+        footer nav #footer_social_nav li a:hover {
           color: #0e2c3a; }
         @media screen and (min-width: 600px) {
-          footer nav #social_nav li a {
+          footer nav #footer_social_nav li a {
             font-size: 20px;
             color: #4A4646; } }
-    @media screen and (min-width: 600px) {
-      footer nav #social_nav .circle {
-        border-radius: 50%;
-        background-color: #C8D572; }
-        footer nav #social_nav .circle:hover {
-          background-color: #f03f37; } }
-    footer nav #social_nav .fa-facebook-f {
-      padding: 10px 15px 10px 15px; }
-    footer nav #social_nav .fa-twitter {
-      padding: 11px 13px 11px 13px; }
-    footer nav #social_nav .fa-instagram {
-      padding: 11px 13px 11px 13px; }
-  @media screen and (min-width: 600px) {
+  footer .privacy_policy {
+    padding-top: 30px; }
     footer .privacy_policy a {
       margin: 0 auto;
       text-align: center;
       font-family: Gill Sans MT,Gill Sans,Calibri,sans-serif;
       color: #3a535f;
-      font-size: 0.945em; } }
+      font-size: 0.75em;
+      -webkit-font-smoothing: antialiased; }
+      @media screen and (min-width: 600px) {
+        footer .privacy_policy a {
+          font-size: 0.945em; } }
 
-#social_nav li:last-of-type {
+@media screen and (min-width: 600px) {
+  .circle {
+    border-radius: 50%;
+    background-color: #C8D572; }
+    .circle:hover {
+      background-color: #f03f37; } }
+
+.fa-facebook-f {
+  padding: 10px 15px 10px 15px; }
+
+.fa-twitter {
+  padding: 11px 13px 11px 13px; }
+
+.fa-instagram {
+  padding: 11px 13px 11px 13px; }
+
+#footer_social_nav li:last-of-type {
   padding-right: 0; }
