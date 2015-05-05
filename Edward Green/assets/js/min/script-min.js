@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#left-menu").sidr({name:"sidr-left",side:"left"}),$("#right-menu").sidr({name:"sidr-right",side:"right"})});

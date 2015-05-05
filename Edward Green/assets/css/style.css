@@ -276,3 +276,20 @@ body {
 
 a {
   text-decoration: none; }
+
+header {
+  background-color: #000;
+  height: 100px; }
+
+#account_icon {
+  position: absolute;
+  right: 10px;
+  top: 22px; }
+
+.mobile_nav > h2 {
+  margin: 0;
+  padding: 22px 0 28px 30px; }
+
+button.cmn-toggle-switch.cmn-toggle-switch__htla {
+  top: 22px;
+  left: 10px; }
