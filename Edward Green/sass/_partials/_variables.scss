@@ -6,9 +6,13 @@
 @include font-face("futuralt", font-files("Futura/FuturaLT_gdi.woff", "Futura/FuturaLT_gdi.ttf", "Futura/FuturaLT_gdi.svg"), "Futura/FuturaLT_gdi.eot");
 @include font-face("futuralt-light", font-files("Futura/FuturaLT-Light_gdi.woff", "Futura/FuturaLT-Light_gdi.ttf", "Futura/FuturaLT-Light_gdi.svg"), "Futura/FuturaLT-Light_gdi.eot");
 @include font-face("futuralt-light", font-files("Serif12/Serif12Beta-Regular.woff", "Serif12/Serif12Beta-Regular.ttf", "Serif12/Serif12Beta-Regular.svg"), "Serif12/Serif12Beta-Regular.eot");
+@include font-face("bryant-pro", font-files("Bryantpro/bryantpro-regular-webfont.woff", "Bryantpro/bryantpro-regular-webfont.ttf", "Bryantpro/bryantpro-regular-webfont.svg"), "Bryantpro/bryantpro-regular-webfont.eot");
+@include font-face("bryant-lt", font-files("Bryantpro/bryantpro-light-webfont.woff", "Bryantpro/bryantpro-light-webfont.ttf", "Bryantpro/bryantpro-light-webfont.svg"), "Bryantpro/bryantpro-light-webfont.eot");
+@include font-face("futura-medium", font-files("Futura/futura-medium.woff", "Futura/futura-medium.ttf", "Futura/futura-medium.svg"), "Futura/futura-medium.eot");
+
 @import url();
 
-// BODY STYLES
+// BODY STYLES 
 
 
 $h1: '';
