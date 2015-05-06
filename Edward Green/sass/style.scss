@@ -77,15 +77,64 @@ header {
 
 // MOBILE NAV/MENUS
 
-.mobile_nav > h2 {
-	margin: 0;
-	padding: 22px 0 28px 30px;
-}
-
 button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	top: 15px;
 	left: 10px;
 }
+
+.mobile_nav {
+	background-color: #000;
+	h2 {
+		font-family: futura-medium;
+		font-size: 1.9375em;
+		background-color: #000;
+		margin: 0;
+		padding: 23px 0 23px 0;
+		text-align: center;
+	}
+	ul {
+		li {
+			font-size: 24px;
+			background-color: #011016;
+			border-top: none;
+			border-bottom: 1px solid #ffefdf;
+			&:hover {
+				background-color: #1F1F1F;
+			}
+			a {
+				
+				&:hover {
+					color: #fcb614;
+				}
+			}
+			&:nth-child(n+5) {
+				border: none;
+			}
+		}
+	}
+	input {
+		background-color: #fffbf7;
+		width: 80%;
+		margin: 0 auto 10px;
+	}
+}
+
+#sidr-right {
+	ul {
+		li {
+			a {
+				#phone_icon {
+					padding: 0 20px 0 0;
+					margin-bottom: -7px;
+				}
+			}
+			&:first-child {
+				padding: 8px 0 8px 2px;
+			}
+		}
+	}
+}
+
 
 // MOBILE NAV/MENUS \\
 
