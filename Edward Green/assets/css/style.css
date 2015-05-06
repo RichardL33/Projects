@@ -335,6 +335,27 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
     border-bottom: 1px solid #ffefdf; }
     .mobile_nav ul li:hover {
       background-color: #1F1F1F; }
+    .mobile_nav ul li:nth-child(2) {
+      font-family: bryant-pro;
+      -webkit-font-smoothing: antialiased;
+      text-transform: uppercase;
+      font-size: 24px;
+      padding: 0 15px;
+      pointer-events: none; }
+    .mobile_nav ul li:nth-child(5) {
+      font-family: bryant-pro;
+      -webkit-font-smoothing: antialiased;
+      text-transform: uppercase;
+      font-size: 24px;
+      padding: 0 15px;
+      pointer-events: none; }
+    .mobile_nav ul li:nth-child(6) {
+      font-family: bryant-pro;
+      -webkit-font-smoothing: antialiased;
+      text-transform: uppercase;
+      font-size: 24px;
+      padding: 0 15px;
+      pointer-events: none; }
     .mobile_nav ul li a:hover {
       color: #fcb614; }
     .mobile_nav ul li:nth-child(n+5) {
