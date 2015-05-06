@@ -34,6 +34,8 @@ body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	background-color: #FFFBF7;
+	color: #001219;
 }
 
 div,
@@ -45,9 +47,18 @@ a {
 	text-decoration: none;
 }
 
+h1,
+h2 {
+	font-family: futuralt-light;
+}
+
+h3 {
+	font-family: bryant-pro;
+}
+
 header {
 	background-color: #000;
-	height: 100px;
+	height: 71px;
 }
 
 #account_icon {
@@ -62,6 +73,32 @@ header {
 }
 
 button.cmn-toggle-switch.cmn-toggle-switch__htla {
-	top: 22px;
+	top: 15px;
 	left: 10px;
 }
+
+#eg_logo {
+	display: block;
+	margin: -24px auto 0;
+}
+
+.hero_text {
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 72%;
+
+}
+
+#hero_mobile {
+	width: 100%;
+}
+
+
+
+
+
+
