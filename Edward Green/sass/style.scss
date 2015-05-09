@@ -311,7 +311,7 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		margin-top: 306px;
 	}
    	@include breakpoint($bp-600) {
-		margin-top: 553px;
+		margin-top: 552px;
 		padding-bottom: 93px;
 		border-bottom: none;
     }
@@ -410,8 +410,9 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		width: 221px;
 		margin: 0 auto;
 		@include breakpoint($bp-600) { 
-			width: 353px;
+			width: 423px;
 			margin: 0 0 0 31px;
+			letter-spacing: 2.25px;
 		}
 		&:last-child {
 			padding-top: 5px;
@@ -421,7 +422,7 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		display: none;
 		@include breakpoint($bp-600) { 
 			display: block;
-			width: 55%;
+			width: 48%;
 			float: right;
 			margin-top: -12px;
 			border: 1.5px solid #001219;
@@ -431,6 +432,35 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 
 #history_mobile {
 	width: 100%;
+	@include breakpoint($bp-600) {
+		display: none;
+	}
+}
+
+#history_desktop {
+	display: none;
+	@include breakpoint($bp-600) {
+		display: block;
+		text-align: center;
+		margin-top: 55px;
+		margin-bottom: 84px;
+		img {
+			display: inline-block;
+			margin: 0 1%;
+			vertical-align: top;
+		}
+	}
+	#history_1 {
+		width: 31.5%;
+		margin-top: 20px;
+	}
+	#history_2 {
+		width: 36%;
+	}
+	#history_3 {
+		width: 19.5%;
+		margin-top: 20px;
+	}
 }
 
 .sect_shoe {
@@ -447,6 +477,12 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		bottom: 0;
 		margin: auto;
 		width: 45%;
+		@include breakpoint($bp-600) {
+			width: 20%;
+			margin: 0;
+			top: 64px;
+			left: 84px;
+		}
 	}
 }
 
@@ -464,6 +500,11 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	width: 100%;
 	margin: 28px auto;
 	text-align: center;
+	@include breakpoint($bp-600) {
+		float: left;
+		width: 41%;
+		margin-top: 192px;
+	}
 	h2 {
 		font-size: 1.5em;
 	}
@@ -488,11 +529,37 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 
 #style_pic1_mobile {
 	width: 100%;
+	@include breakpoint($bp-600) {
+		display: none;		
+	}
 }
 
 #style_pic2_mobile {
 	width: 100%;	
 	margin-top: -3px;
+	@include breakpoint($bp-600) {
+		display: none;
+	}
+}
+
+#style_desktop {
+	display: none;
+	@include breakpoint($bp-600) {
+		display: block;
+		float: right;
+		width: 58%;
+		padding: 75px 0 85px;
+	}
+	#style_1 {
+		width: 42%;
+		margin-right: 4%;
+		float: left;
+		margin-top: 64px;
+	}
+	#style_2 {
+		width: 51%;
+		float: right;
+	}
 }
 
 // SECTION THREE \\
@@ -505,12 +572,18 @@ footer {
 	background-color: #FCE9D5;
 	position: relative;
 	z-index: 1;
+	@include breakpoint($bp-600) {
+		padding: 0;
+	}
 	h3 {
 		background-color: #002D40;
 		padding: 10px;
 		width: 152px;
 		margin: 0 auto;
 		text-align: center;
+		@include breakpoint($bp-600) {
+			display: none;
+		}
 		a {
 			color: #fff;
 			font-family: futura-medium;
@@ -524,20 +597,50 @@ footer {
 		width: 70%;
 		margin: 50px auto 0;
 		text-align: center;
+		@include breakpoint($bp-600) {
+			text-align: left;
+			margin: 0;
+			width: auto;
+			padding: 20px 0 20px 32px;
+		}
 		ul {
 			li {
 				display: inline-block;
 				border-right: 1px solid #002d40;
 				padding: 0 10px 0 5px;
+				@include breakpoint($bp-600) {
+					padding: 0 7px 0 0;
+				}
 				&:nth-child(even) {
 					border: none;
 					padding-right: 0;
+					@include breakpoint($bp-600) {
+						border-right: 1px solid #002d40;
+						padding: 0 7px 0 0;
+					}
 				}
 				&:nth-child(-n+2) {
 					margin-bottom: 15px;
+					@include breakpoint($bp-600) {
+						margin-bottom: 0;
+					}
 				}
 				a {
 					font-size: 1.3125em;
+					@include breakpoint($bp-600) {
+						font-size: 1.125em;
+					}
+				}
+				&:first-child { 
+					@include breakpoint($bp-600) {
+						padding-left: 0;
+					}
+				}
+				&:last-child { 
+					@include breakpoint($bp-600) {
+						padding-right: 0;
+						border-right: none;
+					}
 				}
 			}
 		}
