@@ -284,9 +284,10 @@ html,
 body {
   height: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFBF7;
-  color: #001219; }
+  color: #001219;
+  max-width: 1280px; }
 
 nav
 ul
@@ -420,12 +421,21 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
       margin: 10px 18px;
       float: left; } }
 
-@media (min-width: 600px) {
-  .hero_section {
-    padding-bottom: 89px; } }
-@media (min-width: 768px) {
-  .hero_section {
-    padding-top: 56px; } }
+.hero_section {
+  padding-bottom: 212px; }
+  @media (min-width: 480px) {
+    .hero_section {
+      padding: 71px 0 80px 0; } }
+  @media (min-width: 600px) {
+    .hero_section {
+      padding-bottom: 129px; } }
+  @media (min-width: 768px) {
+    .hero_section {
+      padding-top: 31px;
+      padding-bottom: 215px; } }
+  @media (min-width: 960px) {
+    .hero_section {
+      padding-bottom: 427px; } }
 
 .hero_text {
   text-align: center;
@@ -439,7 +449,11 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
   @media (min-width: 600px) {
     .hero_text {
       margin-top: 0px;
-      position: relative; } }
+      position: relative;
+      max-width: 752px; } }
+  @media (min-width: 768px) {
+    .hero_text {
+      max-width: 945px; } }
   .hero_text h1 {
     font-size: 3.75em;
     color: #FFF;
@@ -490,7 +504,7 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
   width: 100%;
   position: fixed;
   z-index: 0;
-  max-height: 515px; }
+  min-width: 464px; }
   @media (min-width: 480px) {
     #hero_mobile {
       display: none; } }
@@ -502,10 +516,22 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
       display: block;
       width: 100%;
       position: fixed;
-      z-index: 0; } }
+      z-index: 0;
+      min-width: 584px; } }
   @media (min-width: 600px) {
     #hero_stand {
-      top: 0; } }
+      top: 0;
+      min-width: 752px; } }
+  @media (min-width: 768px) {
+    #hero_stand {
+      min-width: 944px; } }
+  @media (min-width: 960px) {
+    #hero_stand {
+      min-width: 1265px; } }
+  @media (min-width: 1280px) {
+    #hero_stand {
+      min-width: 1265px;
+      max-width: 1280px; } }
 
 .section_one {
   background-color: #FFFBF7;

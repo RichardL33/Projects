@@ -33,9 +33,10 @@ html,
 body {
 	height: 100%;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	background-color: #FFFBF7;
 	color: #001219;
+	max-width: 1280px;
 }
 
 div,
@@ -220,11 +221,21 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 // HERO SECTION
 
 .hero_section {
+	padding-bottom: 212px;
+	@include breakpoint($bp-mobile-landscape) {
+	    padding: 71px 0 80px 0;
+	}
 	@include breakpoint($bp-600) {
-		padding-bottom: 89px;
+		padding-bottom: 129px;
 	}
 	@include breakpoint($bp-tablet-portrait) {
-		padding-top: 56px;
+		padding-top: 31px;
+		// padding-bottom: 89px;
+		padding-bottom: 215px;
+	}
+	@include breakpoint($bp-960) {
+		// padding-bottom: 191px;
+		padding-bottom: 427px;
 	}
 }
 
@@ -240,6 +251,10 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	@include breakpoint($bp-600) {
 	    margin-top: 0px; 
 	    position: relative;
+	    max-width: 752px;
+	}
+	@include breakpoint($bp-tablet-portrait) {
+		max-width: 945px;
 	}
 	h1 {
 		font-size: 3.75em;
@@ -296,7 +311,7 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	width: 100%;
 	position: fixed;
 	z-index: 0;
-	max-height: 515px;
+	min-width: 464px;
 	@include breakpoint($bp-mobile-landscape) {
      display: none;
    }
@@ -309,9 +324,21 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		width: 100%;
 		position: fixed;
 		z-index: 0;
+		min-width: 584px;
    }
    @include breakpoint($bp-600) {
 		top: 0;
+		min-width: 752px;
+   }
+   @include breakpoint($bp-tablet-portrait) {
+		min-width: 944px;
+   }
+   @include breakpoint($bp-960) {
+		min-width: 1265px;
+   }
+   @include breakpoint($bp-desktop) {
+		min-width: 1265px;
+		max-width: 1280px;
    }
 }
 
