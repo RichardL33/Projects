@@ -181,7 +181,10 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		ul {
 			li {
 				display: inline-block;
-				margin-right: 70px;
+				margin-right: 40px;
+				@include breakpoint($bp-tablet-portrait) {
+					margin-right: 70px;
+				}
 				a {
 					color: #fff;
 					font-family: futura-medium;
@@ -216,6 +219,15 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 
 // HERO SECTION
 
+.hero_section {
+	@include breakpoint($bp-600) {
+		padding-bottom: 89px;
+	}
+	@include breakpoint($bp-tablet-portrait) {
+		padding-top: 56px;
+	}
+}
+
 .hero_text {
 	text-align: center;
 	position: absolute;
@@ -223,11 +235,11 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-	width: 72%;
 	margin-top: 85px;
 	z-index: 1;
 	@include breakpoint($bp-600) {
-	    margin-top: 56px; 
+	    margin-top: 0px; 
+	    position: relative;
 	}
 	h1 {
 		font-size: 3.75em;
@@ -237,9 +249,10 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 			padding-top: 12px;
 			margin: 0 auto;
 			@include breakpoint($bp-mobile-landscape) {
-				padding-top: 7px;
+				padding-top: 0px;
 			}
 			@include breakpoint($bp-600) {
+				padding-top: 7px;
 				margin: -10px 0 5px 0;
 			}
 		}
@@ -247,13 +260,19 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	     font-size: 2.75em;
 	   }
    	@include breakpoint($bp-600) {
-		font-size: 7.5em;
+		font-size: 5em;
 		margin-bottom: -12px;
+      }
+      @include breakpoint($bp-tablet-portrait) {
+		font-size: 7.5em;
       }
 	}
 	hr {
 		border: 1px solid #fcb614;
 		width: 68%;
+		@include breakpoint($bp-mobile-landscape) {
+			width: 40%;
+		}
 	}
 	h3 {
 		font-size: 1.125em;
@@ -311,9 +330,11 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		margin-top: 306px;
 	}
    	@include breakpoint($bp-600) {
-		margin-top: 552px;
-		padding-bottom: 93px;
-		border-bottom: none;
+		margin-top: 0;
+    }
+    @include breakpoint($bp-tablet-portrait) {
+    	padding-bottom: 93px;
+    	border-bottom: none;
     }
 }
 
@@ -327,6 +348,9 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		margin-top: 85px;
    	}
    	@include breakpoint($bp-600) {
+		margin-top: 80px;
+   	}
+   	@include breakpoint($bp-tablet-portrait) {
 		margin-top: 130px;
    	}
 	h3 {
@@ -343,8 +367,11 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		     font-weight: bold;
 		   }
 		@include breakpoint($bp-600) {
-			font-size: 3.65em;
+			font-size: 2.65em;
 			padding-bottom: 5px;
+		}
+		@include breakpoint($bp-tablet-portrait) {
+			font-size: 3.65em;
 		}
 	}
 	hr {
@@ -360,7 +387,7 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	}
 	h4 {
 		display: none;
-		@include breakpoint($bp-600) {
+		@include breakpoint($bp-tablet-portrait) {
 			display: block;
 			font-size: 1.125em;
 			font-family: bryant-pro;
@@ -410,6 +437,12 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		width: 221px;
 		margin: 0 auto;
 		@include breakpoint($bp-600) { 
+			width: 384px;
+			margin: 0 0 0 10px;
+			font-size: 1.3125em;
+			letter-spacing: 1px;
+		}
+		@include breakpoint($bp-tablet-portrait) {
 			width: 423px;
 			margin: 0 0 0 31px;
 			letter-spacing: 2.25px;
@@ -422,10 +455,13 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		display: none;
 		@include breakpoint($bp-600) { 
 			display: block;
-			width: 48%;
+			width: 30%;
 			float: right;
 			margin-top: -12px;
 			border: 1.5px solid #001219;
+		}
+		@include breakpoint($bp-tablet-portrait) {
+			width: 40%;
 		}
 	}
 }
@@ -502,6 +538,10 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	text-align: center;
 	@include breakpoint($bp-600) {
 		float: left;
+		width: 47%;
+		margin-top: 56px;
+	}
+	@include breakpoint($bp-tablet-portrait) {
 		width: 41%;
 		margin-top: 192px;
 	}
@@ -547,8 +587,11 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	@include breakpoint($bp-600) {
 		display: block;
 		float: right;
-		width: 58%;
+		width: 50%;
 		padding: 75px 0 85px;
+	}
+	@include breakpoint($bp-tablet-portrait) {
+		width: 58%;
 	}
 	#style_1 {
 		width: 42%;
@@ -640,6 +683,12 @@ footer {
 					@include breakpoint($bp-600) {
 						padding-right: 0;
 						border-right: none;
+					}
+				}
+				&:nth-child(2) {
+					@media screen and (min-width: 510px) {
+						border-right: 1px solid #002d40;
+						padding-right: 7px;
 					}
 				}
 			}
