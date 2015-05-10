@@ -147,7 +147,11 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 				text-transform: uppercase;
 				font-size: 24px;
 				padding:0 15px;
-				pointer-events: none;
+				&:hover {
+					background-color: #011016;
+					margin-top: -1px;
+					border-top: 1px solid #ffefdf;
+				}
 			}
 			&:nth-child(6) {
 				font-family: bryant-pro;
@@ -155,7 +159,10 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 				text-transform: uppercase;
 				font-size: 24px;
 				padding:0 15px;
-				pointer-events: none;
+				&:hover {
+					background-color: #011016;
+					margin-top: -1px;
+				}
 			}
 			a {
 				#phone_icon {
@@ -226,16 +233,14 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	    padding: 71px 0 80px 0;
 	}
 	@include breakpoint($bp-600) {
-		padding-bottom: 129px;
+		padding-bottom: 121px;
 	}
 	@include breakpoint($bp-tablet-portrait) {
 		padding-top: 31px;
-		// padding-bottom: 89px;
-		padding-bottom: 215px;
+		padding-bottom: 207px;
 	}
 	@include breakpoint($bp-960) {
-		// padding-bottom: 191px;
-		padding-bottom: 427px;
+		padding-bottom: 419px;
 	}
 }
 
@@ -260,9 +265,20 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		font-size: 3.75em;
 		color: #FFF;
 		margin: 12px 0 0 0;
+		&:first-of-type {
+			margin-bottom: -4px;
+			-webkit-animation-delay: 500ms;
+			   -moz-animation-delay: 500ms;
+			     -o-animation-delay: 500ms;
+			        animation-delay: 500ms;	
+		}
 		&:last-of-type {
-			padding-top: 12px;
+			padding-top: 5px;
 			margin: 0 auto;
+			-webkit-animation-delay: 500ms;
+			   -moz-animation-delay: 500ms;
+			     -o-animation-delay: 500ms;
+			        animation-delay: 500ms;
 			@include breakpoint($bp-mobile-landscape) {
 				padding-top: 0px;
 			}
@@ -272,21 +288,22 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 			}
 		}
 	@include breakpoint($bp-mobile-landscape) {
-	     font-size: 2.75em;
-	   }
+			font-size: 2.75em;
+	   	}
    	@include breakpoint($bp-600) {
-		font-size: 5em;
-		margin-bottom: -12px;
-      }
-      @include breakpoint($bp-tablet-portrait) {
-		font-size: 7.5em;
-      }
+			font-size: 5em;
+			margin-bottom: -12px;
+		}
+	@include breakpoint($bp-tablet-portrait) {
+			font-size: 7.5em;
+      	}
 	}
 	hr {
 		border: 1px solid #fcb614;
-		width: 68%;
+		width: .001px;
+		opacity: 0;
 		@include breakpoint($bp-mobile-landscape) {
-			width: 40%;
+			width: .001px;
 		}
 	}
 	h3 {
@@ -337,7 +354,6 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		min-width: 1265px;
    }
    @include breakpoint($bp-desktop) {
-		min-width: 1265px;
 		max-width: 1280px;
    }
 }
@@ -438,8 +454,28 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	width: 49%;
 	float: right;
 	vertical-align: top;
-	@include breakpoint($bp-600) {
+	min-height: 184.47px;
+    background: url('../img/back_boot.png') center center;
+    background-size: 100% 100%;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    @include breakpoint($bp-mobile-landscape) {
+        min-height: 227.04px; 
+	}
+    @include breakpoint($bp-600) {
+    	min-height: 344.21px; 
+	}
+    @include breakpoint($bp-tablet-portrait) {
+    	min-height: 453px;
+	}
+	@include breakpoint($bp-960) {
      	width: 51%;
+     	min-height: 598.55px;
+     	max-height: 598.55px;
+   	}
+   	&:hover {
+   	    background-size: 125% 125%;
    	}
 }
 
@@ -480,15 +516,15 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	}
 	hr {
 		display: none;
-		@include breakpoint($bp-600) { 
+		@include breakpoint($bp-tablet-portrait) { 
 			display: block;
 			width: 30%;
 			float: right;
 			margin-top: -12px;
 			border: 1.5px solid #001219;
 		}
-		@include breakpoint($bp-tablet-portrait) {
-			width: 40%;
+		@include breakpoint($bp-960) {
+			width: 50%;
 		}
 	}
 }
@@ -507,22 +543,96 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		text-align: center;
 		margin-top: 55px;
 		margin-bottom: 84px;
-		img {
+		div {
 			display: inline-block;
 			margin: 0 1%;
 			vertical-align: top;
 		}
 	}
 	#history_1 {
-		width: 31.5%;
 		margin-top: 20px;
+		background: url('../img/history_pic_1.png') center center no-repeat;
+		background-size: 100% 100%;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		@include breakpoint($bp-600) {
+			width: 184.266px;
+			height: 282.4px;
+		}
+		@include breakpoint($bp-tablet-portrait) {
+			width: 237.500px;
+			height: 370.02px
+		}
+
+		@include breakpoint($bp-960) {
+			width: 298px;
+			height: 403px
+		}
+		@include breakpoint($bp-desktop) {
+			width: 398px;
+			height: 553px;
+		}
+		&:hover {
+		    background-size: 125% 125%;
+		}
 	}
 	#history_2 {
-		width: 36%;
+		background: url('../img/history_pic_2.png') center center no-repeat;
+		background-size: 100% 100%;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		@include breakpoint($bp-600) {
+			width: 210.594px;
+			height: 312.9px;
+		}
+
+		@include breakpoint($bp-tablet-portrait) {
+			width: 291.438px;
+			height: 418.52px;
+		}
+
+		@include breakpoint($bp-960) {
+			width: 342px;
+			height: 447px;
+		}
+		@include breakpoint($bp-desktop) {
+			width: 442px;
+			height: 607px;
+		}
+		&:hover {
+		    background-size: 125% 125%;
+		}
 	}
 	#history_3 {
-		width: 19.5%;
 		margin-top: 20px;
+		background: url('../img/history_pic_3.png') center center no-repeat;
+		background-size: 100% 100%;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		@include breakpoint($bp-600) {
+			width: 144.063px;
+			height: 286.68px;
+		}
+
+		@include breakpoint($bp-tablet-portrait) {
+			width: 167.016px;
+			height: 375.92px;
+		}
+
+		@include breakpoint($bp-960) {
+			width: 197px;
+			height: 407px;
+		}
+		@include breakpoint($bp-desktop) {
+			width: 287px;
+			height: 557px;	
+		}
+		&:hover {
+		    background-size: 125% 125%;
+		}
 	}
 }
 
@@ -611,24 +721,79 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 
 #style_desktop {
 	display: none;
+	div {
+		@include breakpoint($bp-600) {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
 	@include breakpoint($bp-600) {
 		display: block;
 		float: right;
 		width: 50%;
-		padding: 75px 0 85px;
+		padding: 25px 0 35px;
 	}
 	@include breakpoint($bp-tablet-portrait) {
 		width: 58%;
+		padding: 75px 0 85px;
 	}
 	#style_1 {
-		width: 42%;
 		margin-right: 4%;
-		float: left;
 		margin-top: 64px;
+		background: url('../img/style_pic_1.png') center center no-repeat;
+		background-size: 100% 100%;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		@include breakpoint($bp-600) {
+			width: 111px;
+			height: 205px;
+		}
+
+		@include breakpoint($bp-tablet-portrait) {
+			width: 191px;
+			height: 345px;
+		}
+
+		@include breakpoint($bp-960) {
+			width: 231px;
+			height: 385px;
+		}
+		@include breakpoint($bp-desktop) {
+			width: 261px;
+			height: 415px;	
+		}
+		&:hover {
+		    background-size: 125% 125%;
+		}
 	}
 	#style_2 {
-		width: 51%;
-		float: right;
+		background: url('../img/style_pic_2.png') center center no-repeat;
+		background-size: 100% 100%;
+		-moz-transition: all .5s;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		@include breakpoint($bp-600) {
+			width: 160px;
+			height: 309px;
+		}
+
+		@include breakpoint($bp-tablet-portrait) {
+			width: 220px;
+			height: 439px;
+		}
+
+		@include breakpoint($bp-960) {
+			width: 280px;
+			height: 509px;
+		}
+		@include breakpoint($bp-desktop) {
+			width: 310px;
+			height: 639px;	
+		}
+		&:hover {
+		    background-size: 125% 125%;
+		}
 	}
 }
 
