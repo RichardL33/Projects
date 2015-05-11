@@ -182,11 +182,15 @@ button {
 }
 
 #header_social_nav {
-	li {
-		margin-bottom: 25px;
-	}
-	:first-of-type {
-		margin-top: 25px;
+	display: none;
+	@media screen and (min-width: 600px) {
+		display: block;
+		li {
+			margin-bottom: 25px;
+		}
+		:first-of-type {
+			margin-top: 25px;
+		}
 	}
 }
 
@@ -226,15 +230,18 @@ header {
 						@media screen and (min-width: 600px) {
 						font-size: 1.225em; 
 						-webkit-font-smoothing: antialiased;
-						    padding: 20px 40px;
+						    padding: 20px 11px;
 						    &:hover {
 						        background: url('../img/nav_hover.png') no-repeat;
 						        border: 0;
 						        background-size: 100% 100%;
 						       }
+						}
+						@include breakpoint ($bp-tablet-portrait) {
+							padding: 20px 30px;
+						}
 					}
 				} 
-			} 
 			.slant {
 				border: 1px solid white;
 				-webkit-transform: rotate(-33deg);
@@ -277,17 +284,25 @@ header {
 	} 
 }
 
-// #family_hero {
-// 	display: none;
-// 	@media screen and (min-width: 600px) {
-// 		display: block;
-// 		position: fixed;
-// 		top: 0;
-// 		left: 0;
-// 		min-width: 100%;
-// 		min-height: 100%;
-// 	}
-// }
+#family_hero {
+	display: none;
+	@media screen and (min-width: 600px) {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		min-width: 676px;
+		width: 100%;
+	}
+	@include breakpoint ($bp-tablet-portrait) {
+		min-width: 906px;
+		max-width: 906px;
+	}
+
+}
 
 .large_container {
 	width: 100%; 
@@ -301,6 +316,7 @@ header {
   	background-size: cover;
 	height: 360px; 
 	@media screen and (min-width: 600px) {
+		background: none;
 		height: 490px;
 		-webkit-background-size: 100%;
 		-moz-background-size: 100%;
@@ -324,12 +340,29 @@ header {
 }
 
 .mission_box {
+	-webkit-transition: all 500ms ease;
+	   -moz-transition: all 500ms ease;
+	    -ms-transition: all 500ms ease;
+	     -o-transition: all 500ms ease;
+	        transition: all 500ms ease;
 	background-color: #C8D572; 
 	position: relative;
 	padding: 15px;
 	text-align: center;  
 	// top: 360px;
 	margin-top: 360px;
+	-webkit-transform-origin: bottom left;
+	   -moz-transform-origin: bottom left;
+	    -ms-transform-origin: bottom left;
+	     -o-transform-origin: bottom left;
+	        transform-origin: bottom left;
+	// &:hover {
+	// 	-webkit-transform: scale(1.5);
+	// 	   -moz-transform: scale(1.5);
+	// 	    -ms-transform: scale(1.5);
+	// 	     -o-transform: scale(1.5);
+	// 	        transform: scale(1.5);
+	// }
 	&:after {
 		content:"";
 		  position:absolute;
@@ -344,12 +377,15 @@ header {
 	}
 	@media screen and (min-width: 600px) {
 			position: absolute;
-			top: 520px;
+			top: 350px;
 			left: -35px;
 			max-width: 635px;
 			z-index: 10;
 			margin-top: 0;
 			padding: 20px 10px;
+		}
+		@include breakpoint ($bp-tablet-portrait) {
+			top: 520px;
 		}
 	h1 {
 		font-family: KlinicSlab-Light, Helvetica, Arial;
@@ -417,13 +453,17 @@ header {
 	}
 	@media screen and (min-width: 600px) {
 			position: absolute;
-			top: 705px;
+			top: 585px;
 			right: -35px;
 			max-width: 635px;
 			text-align: left;
 			z-index: 5;
 			padding-top: 125px;
 		}
+		@include breakpoint ($bp-tablet-portrait) {
+			top: 705px;
+		}
+
 	h2 {
 		font-family: OstrichSansRounded-Medium, Helvetica, Arial;
 		font-size: 48px;
@@ -494,7 +534,10 @@ header {
 
 .sec_1 {
 	@media screen and (min-width: 600px) {
-		height: 985px;
+		height: 915px;
+	}
+	@include breakpoint ($bp-tablet-portrait) {
+		height: 1015px;
 	}
 }
 
