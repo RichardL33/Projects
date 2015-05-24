@@ -1,1 +1,0 @@
-function checkSize(){"320px"===$(".main_container").css("width")||"480px"===$(".main_container").css("width")||"768px"===$(".main_container").css("width")}$(document).ready(function(){checkSize(),$(window).resize(checkSize),$("#show_off").click(function(){$(this).css("display","none"),$("body").css("background-image","url(assets/img/colored_background_2.jpg)")})});
