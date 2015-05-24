@@ -744,54 +744,22 @@ header {
   display: none; }
   @media screen and (min-width: 600px) {
     .sec_2 #circle4 {
-      display: block;
-      top: 100px;
-      left: 40%;
-      z-index: 100;
-      -webkit-transform: scale(2);
-      -moz-transform: scale(2);
-      -ms-transform: scale(2);
-      -o-transform: scale(2);
-      transform: scale(2); } }
+      display: block; } }
 .sec_2 #circle3 {
   display: none; }
   @media screen and (min-width: 600px) {
     .sec_2 #circle3 {
-      display: block;
-      top: 50px;
-      right: 7%;
-      z-index: 75;
-      -webkit-transform: scale(1);
-      -moz-transform: scale(1);
-      -ms-transform: scale(1);
-      -o-transform: scale(1);
-      transform: scale(1); } }
+      display: block; } }
 .sec_2 #circle2 {
   display: none; }
   @media screen and (min-width: 600px) {
     .sec_2 #circle2 {
-      display: block;
-      top: 150px;
-      left: 12%;
-      z-index: 50;
-      -webkit-transform: scale(1);
-      -moz-transform: scale(1);
-      -ms-transform: scale(1);
-      -o-transform: scale(1);
-      transform: scale(1); } }
+      display: block; } }
 .sec_2 #circle1 {
   display: none; }
   @media screen and (min-width: 600px) {
     .sec_2 #circle1 {
-      display: block;
-      top: 50px;
-      right: 40%;
-      z-index: 25;
-      -webkit-transform: scale(1);
-      -moz-transform: scale(1);
-      -ms-transform: scale(1);
-      -o-transform: scale(1);
-      transform: scale(1); } }
+      display: block; } }
 .sec_2 .nav_arrows {
   display: none; }
   @media screen and (min-width: 600px) {
@@ -877,6 +845,53 @@ footer {
     background-color: #C8D572; }
     .circle:hover {
       background-color: #f03f37; } }
+
+@media screen and (min-width: 600px) {
+  .position1 {
+    display: block;
+    top: 100px;
+    left: 40%;
+    z-index: 100;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2); } }
+
+@media screen and (min-width: 600px) {
+  .position2 {
+    top: 150px;
+    left: 12%;
+    z-index: 50;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+
+@media screen and (min-width: 600px) {
+  .position3 {
+    display: block;
+    top: 50px;
+    right: 7%;
+    z-index: 75;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+
+@media screen and (min-width: 600px) {
+  .position4 {
+    display: block;
+    top: 50px;
+    right: 40%;
+    z-index: 25;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
 
 .fa-facebook-f {
   padding: 10px 15px 10px 15px; }
