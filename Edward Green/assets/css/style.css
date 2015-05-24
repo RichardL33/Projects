@@ -294,7 +294,12 @@ ul
 li
 a {
   color: #002D40;
-  font-family: bryant-pro; }
+  font-family: bryant-pro;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease; }
 
 a {
   text-decoration: none;
@@ -948,11 +953,11 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
     @media (min-width: 600px) {
       #style_desktop #style_2 {
         width: 160px;
-        height: 309px; } }
+        height: 295px; } }
     @media (min-width: 768px) {
       #style_desktop #style_2 {
         width: 220px;
-        height: 439px; } }
+        height: 410px; } }
     @media (min-width: 960px) {
       #style_desktop #style_2 {
         width: 280px;
@@ -960,7 +965,7 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
     @media (min-width: 1280px) {
       #style_desktop #style_2 {
         width: 310px;
-        height: 639px; } }
+        height: 590px; } }
     #style_desktop #style_2:hover {
       background-size: 125% 125%; }
 

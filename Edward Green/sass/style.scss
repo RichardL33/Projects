@@ -50,6 +50,11 @@ li
 a {
 	color: #002D40;
 	font-family: bryant-pro;
+	-webkit-transition: all 300ms ease;
+	   -moz-transition: all 300ms ease;
+	    -ms-transition: all 300ms ease;
+	     -o-transition: all 300ms ease;
+	        transition: all 300ms ease;
 }
 
 a {
@@ -826,12 +831,12 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		transition: all .5s;
 		@include breakpoint($bp-600) {
 			width: 160px;
-			height: 309px;
+			height: 295px;
 		}
 
 		@include breakpoint($bp-tablet-portrait) {
 			width: 220px;
-			height: 439px;
+			height: 410px;
 		}
 
 		@include breakpoint($bp-960) {
@@ -840,7 +845,7 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 		}
 		@include breakpoint($bp-desktop) {
 			width: 310px;
-			height: 639px;	
+			height: 590px;	
 		}
 		&:hover {
 		    background-size: 125% 125%;
