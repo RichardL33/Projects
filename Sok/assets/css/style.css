@@ -312,7 +312,7 @@ img {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   padding: 70px 0;
-  width: 320px;
+  width: 345px;
   height: 375px;
   margin: 0 auto; }
   @media (min-width: 480px) {
@@ -321,7 +321,7 @@ img {
       height: 412px; } }
   @media (min-width: 768px) {
     .main_container {
-      width: 768px;
+      width: 753px;
       height: 574px; } }
   @media (min-width: 1024px) {
     .main_container {
@@ -454,6 +454,12 @@ video {
     padding: 5px;
     width: 135px;
     position: absolute; }
+  @media (min-width: 1024px) {
+    .group_text_1 {
+      margin-left: 100px; } }
+  @media screen and (min-width: 1200px) {
+    .group_text_1 {
+      margin-left: 250px; } }
   .group_text_1 #animated_text_1 {
     top: 0;
     left: 0; }
@@ -525,6 +531,13 @@ video {
     @media (min-width: 768px) {
       .group_text_2 h2 {
         font-size: 1em; } }
+  @media (min-width: 1024px) {
+    .group_text_2 {
+      width: 764px;
+      right: -100px; } }
+  @media screen and (min-width: 1200px) {
+    .group_text_2 {
+      right: -250px; } }
   .group_text_2 #animated_text_5 {
     width: 160px;
     top: 0;
@@ -566,7 +579,7 @@ video {
         top: 43px; } }
   .group_text_2 #animated_text_8 {
     z-index: -10;
-    width: 230px;
+    width: 288px;
     top: 86px;
     left: 0; }
     .group_text_2 #animated_text_8 br {
@@ -581,6 +594,7 @@ video {
         line-height: 22px;
         padding-top: 15px;
         padding-bottom: 0;
+        width: 215px;
         top: 57px;
         left: 237px; } }
   .group_text_2 #animated_text_9 {
@@ -592,12 +606,12 @@ video {
       .group_text_2 #animated_text_9 {
         font-size: 1.35em;
         width: 290px;
-        right: 67px; } }
+        right: 64px; } }
     @media (min-width: 768px) {
       .group_text_2 #animated_text_9 {
         font-size: 1em;
         width: 220px;
-        right: 198px;
+        right: 214px;
         top: 92px; } }
   .group_text_2 #animated_text_10 {
     width: 300px;
@@ -655,17 +669,17 @@ video {
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
     width: 210px;
-    top: 320px;
-    right: -70px;
-    text-align: center;
-    z-index: -100; }
+    top: 315px;
+    right: -50px;
+    text-align: center; }
     @media (min-width: 480px) {
       .group_text_2 #animated_text_13 {
-        top: 293px;
+        top: 300px;
         right: 45px; } }
     @media (min-width: 768px) {
       .group_text_2 #animated_text_13 {
+        z-index: -100;
         font-weight: bolder;
         width: 175px;
         top: 245px;
-        right: 188px; } }
+        right: 185px; } }
