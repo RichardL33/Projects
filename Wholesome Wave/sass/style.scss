@@ -356,13 +356,6 @@ header {
 	    -ms-transform-origin: 0.08% 106%;
 	     -o-transform-origin: 0.08% 106%;
 	        transform-origin: 0.08% 106%;
-	&:hover {
-		-webkit-transform: scale(1.25);
-		   -moz-transform: scale(1.25);
-		    -ms-transform: scale(1.25);
-		     -o-transform: scale(1.25);
-		        transform: scale(1.25);
-	}
 	&:after {
 		content:"";
 		  position:absolute;
@@ -384,9 +377,16 @@ header {
 			margin-top: 0;
 			padding: 20px 10px;
 		}
-		@include breakpoint ($bp-tablet-portrait) {
-			top: 520px;
+	@include breakpoint ($bp-tablet-portrait) {
+		top: 520px;
+		&:hover {
+			-webkit-transform: scale(1.25);
+			   -moz-transform: scale(1.25);
+			    -ms-transform: scale(1.25);
+			     -o-transform: scale(1.25);
+			        transform: scale(1.25);
 		}
+	}
 	h1 {
 		font-family: KlinicSlab-Light, Helvetica, Arial;
 		font-size: 45px;
@@ -449,13 +449,6 @@ header {
 	    -ms-transform-origin: 99.92% 106%;
 	     -o-transform-origin: 99.92% 106%;
 	        transform-origin: 99.92% 106%;
-	&:hover {
-		-webkit-transform: scale(1.25);
-		   -moz-transform: scale(1.25);
-		    -ms-transform: scale(1.25);
-		     -o-transform: scale(1.25);
-		        transform: scale(1.25);
-	}
 	&:after {
 		content:"";
 		  position:absolute;
@@ -477,9 +470,17 @@ header {
 			z-index: 5;
 			padding-top: 125px;
 		}
-		@include breakpoint ($bp-tablet-portrait) {
-			top: 705px;
+	@include breakpoint ($bp-tablet-portrait) {
+		top: 705px;
+		&:hover {
+			-webkit-transform: scale(1.25);
+			   -moz-transform: scale(1.25);
+			    -ms-transform: scale(1.25);
+			     -o-transform: scale(1.25);
+			        transform: scale(1.25);
+		    z-index: 40;
 		}
+	}
 
 	h2 {
 		font-family: OstrichSansRounded-Medium, Helvetica, Arial;
@@ -563,7 +564,7 @@ header {
 		position: relative;
 		height: 410px;
 	}
-	#family_gallery {
+	#veggie_display {
 		width: 100%; 
 		@media screen and (min-width: 600px) {
 			display: none;

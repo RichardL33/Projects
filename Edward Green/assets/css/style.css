@@ -323,6 +323,14 @@ header {
       background-color: transparent;
       position: relative; } }
 
+hr {
+  border: 1px solid #fcb614;
+  width: .001px;
+  opacity: 0; }
+  @media (min-width: 480px) {
+    hr {
+      width: .001px; } }
+
 button.cmn-toggle-switch.cmn-toggle-switch__htla {
   top: 15px;
   left: 10px; }
@@ -602,14 +610,10 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
         font-size: 3.65em; } }
   .sect_details hr {
     border-top: 1px solid #010608;
-    width: 55%; }
-    @media (min-width: 480px) {
-      .sect_details hr {
-        width: 80%; } }
+    opacity: 0; }
     @media (min-width: 600px) {
       .sect_details hr {
-        border: 1.5px solid #010608;
-        width: 72%; } }
+        border: 1.5px solid #010608; } }
   .sect_details h4 {
     display: none; }
     @media (min-width: 768px) {

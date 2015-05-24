@@ -541,12 +541,6 @@ header {
   -ms-transform-origin: 0.08% 106%;
   -o-transform-origin: 0.08% 106%;
   transform-origin: 0.08% 106%; }
-  .mission_box:hover {
-    -webkit-transform: scale(1.25);
-    -moz-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    -o-transform: scale(1.25);
-    transform: scale(1.25); }
   .mission_box:after {
     content: "";
     position: absolute;
@@ -572,7 +566,13 @@ header {
       padding: 20px 10px; } }
   @media (min-width: 768px) {
     .mission_box {
-      top: 520px; } }
+      top: 520px; }
+      .mission_box:hover {
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        transform: scale(1.25); } }
   .mission_box h1 {
     font-family: KlinicSlab-Light, Helvetica, Arial;
     font-size: 45px; }
@@ -626,12 +626,6 @@ header {
   -ms-transform-origin: 99.92% 106%;
   -o-transform-origin: 99.92% 106%;
   transform-origin: 99.92% 106%; }
-  .signup_box:hover {
-    -webkit-transform: scale(1.25);
-    -moz-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    -o-transform: scale(1.25);
-    transform: scale(1.25); }
   .signup_box:after {
     content: "";
     position: absolute;
@@ -657,7 +651,14 @@ header {
       padding-top: 125px; } }
   @media (min-width: 768px) {
     .signup_box {
-      top: 705px; } }
+      top: 705px; }
+      .signup_box:hover {
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        transform: scale(1.25);
+        z-index: 40; } }
   .signup_box h2 {
     font-family: OstrichSansRounded-Medium, Helvetica, Arial;
     font-size: 48px;
@@ -726,10 +727,10 @@ header {
   .sec_2 {
     position: relative;
     height: 410px; } }
-.sec_2 #family_gallery {
+.sec_2 #veggie_display {
   width: 100%; }
   @media screen and (min-width: 600px) {
-    .sec_2 #family_gallery {
+    .sec_2 #veggie_display {
       display: none; } }
 .sec_2 .circle_pics {
   display: none; }

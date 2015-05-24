@@ -20,6 +20,13 @@ $(document).ready(function() {
       }, 1000);
 	}, 900);
 
+  setTimeout(function(){
+$("#details_divider").animate({
+        width: "70%",
+        opacity: 1.0,
+      }, 1000);
+  }, 900);
+
 // SCROLL BACK TO TOP - ANIMATION - SMOOTH SCROLL
 
 $(window).scroll(function(){

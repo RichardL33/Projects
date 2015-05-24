@@ -83,6 +83,15 @@ header {
    }
 }
 
+hr {
+	border: 1px solid #fcb614;
+	width: .001px;
+	opacity: 0;
+	@include breakpoint($bp-mobile-landscape) {
+		width: .001px;
+	}
+}
+
 // MOBILE NAV/MENUS
 
 button.cmn-toggle-switch.cmn-toggle-switch__htla {
@@ -419,13 +428,14 @@ button.cmn-toggle-switch.cmn-toggle-switch__htla {
 	}
 	hr {
 		border-top: 1px solid #010608;
-		width: 55%;
+		opacity: 0;
+		// width: 55%;
 		@include breakpoint($bp-mobile-landscape) {
-		     width: 80%;
+		     // width: 80%;
 		   }
 		@include breakpoint($bp-600) {
 			border: 1.5px solid #010608;
-			width: 72%;
+			// width: 72%;
 		}
 	}
 	h4 {
