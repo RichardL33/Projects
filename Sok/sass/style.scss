@@ -264,6 +264,11 @@ video {
 		left: 0;
 		@include breakpoint ($bp-tablet-portrait) {
 			left: 140px;
+			-webkit-transform: rotateX(-90deg);
+			   -moz-transform: rotateX(-90deg);
+			    -ms-transform: rotateX(-90deg);
+			     -o-transform: rotateX(-90deg);
+			        transform: rotateX(-90deg);
 		}
 	}
 	#animated_text_2 {
@@ -274,9 +279,12 @@ video {
 		}
 	}
 	#animated_text_3 {
-		top: 62px;
+		// top: 62px;
+		top: 31px;
 		left: 62px;
+		z-index: -10;
 		@include breakpoint ($bp-tablet-portrait) {
+			top: 31px;
 			left: 210px;
 		}
 	}
@@ -287,7 +295,8 @@ video {
 		top: 100px;
 		left: 45px;
 		@include breakpoint ($bp-tablet-portrait) {
-			left: 195px;
+			// left: 195px;
+			left: -450px;
 		}
 		#soks_text {
 			font-size: 2.2em;
@@ -348,13 +357,16 @@ video {
 	}
 	#animated_text_5 {
 		width: 160px;
-		top: 0;
+		// top: 0;
+		top: -35px;
 		left: 0;
+		opacity: 0;
 		@include breakpoint ($bp-mobile-landscape) {
 			left: auto;
 			right: 130px;
 		}
 		@include breakpoint ($bp-tablet-portrait) {
+			z-index: 10;
 			padding-right: 15px;
 			width: 127px;
 			right: 290px;
@@ -369,8 +381,10 @@ video {
 			right: 60px;
 		}
 		@include breakpoint ($bp-tablet-portrait) {
+			z-index: 10;
 			width: 166px;
-			right: 230px;
+			// right: 230px;
+			right: -300px;
 			top: 20px;
 		}
 	}
@@ -383,9 +397,11 @@ video {
 			right: 20px;
 		}
 		@include breakpoint ($bp-tablet-portrait) {
+			z-index: 10;
 			width: 251px;
 			right: 145px;
-			top: 43px;
+			// top: 43px;
+			top: 113px;
 		}
 	}
 	#animated_text_8 {
@@ -403,12 +419,15 @@ video {
 		top: 86px;
 		left: 0;
 		@include breakpoint ($bp-tablet-portrait) {
+			z-index: 0;
 			line-height: 22px;
 			padding-top: 15px;
 			padding-bottom: 0;
-			width: 215px;
+			border-right: 60px solid #FFF;
+			width: 275px;
 			top: 57px;
-			left: 237px;
+			// left: 237px;
+			left: 0;
 		}
 	}
 	#animated_text_9 {
@@ -422,9 +441,11 @@ video {
 			right: 64px;
 		}
 		@include breakpoint ($bp-tablet-portrait) {
+			z-index: 0;
 			font-size: 1em;
 			width: 220px;
-			right: 214px;
+			// right: 214px;
+			right: -355px;
 			top: 92px;
 		}
 	}
@@ -441,10 +462,21 @@ video {
 			}
 		}
 		@include breakpoint ($bp-tablet-portrait) {
+			z-index: 0;
 			font-size: 1em;
 			width: 385px;
 			top: 115px;
 			right: 84px;
+			-webkit-transform-origin: top;
+			   -moz-transform-origin: top;
+			    -ms-transform-origin: top;
+			     -o-transform-origin: top;
+			        transform-origin: top;
+			-webkit-transform: rotateX(-90deg);
+			   -moz-transform: rotateX(-90deg);
+			    -ms-transform: rotateX(-90deg);
+			     -o-transform: rotateX(-90deg);
+			        transform: rotateX(-90deg);
 		}
 	}
 	#animated_text_11 {
@@ -459,11 +491,14 @@ video {
 			right: 31px;
 		}
 		@include breakpoint ($bp-tablet-portrait) {
+			z-index: 0;
 			font-size: 1em;
 			padding-top: 0;
 			width: 380px;
 			top: 140px;
-			left: 230px;
+			// left: 230px;
+			left: -30px;
+			opacity: 0;
 		}
 	}
 	#animated_text_12 {
@@ -476,9 +511,20 @@ video {
 			top: 195px;
 		}
 		@include breakpoint ($bp-tablet-portrait) {
+			z-index: -200;
 			width: 268px;
 			top: 158px;
 			left: 230px;
+			-webkit-transform-origin: top;
+			   -moz-transform-origin: top;
+			    -ms-transform-origin: top;
+			     -o-transform-origin: top;
+			        transform-origin: top;
+			-webkit-transform: rotateX(-90);
+			   -moz-transform: rotateX(-90);
+			    -ms-transform: rotateX(-90);
+			     -o-transform: rotateX(-90);
+			        transform: rotateX(-90);
 		}
 	}
 	#animated_text_13 {
@@ -499,7 +545,8 @@ video {
 			z-index: -100;
 			font-weight: bolder;
 			width: 175px;
-			top: 245px;
+			// top: 245px;
+			top: 95px;
 			right: 185px;
 		}
 	}
