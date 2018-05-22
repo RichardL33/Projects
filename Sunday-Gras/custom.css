@@ -1,0 +1,37 @@
+/*!------------------------------------------------
+    Template Name: Sunshine
+    Template URI: https://accesstheme.com/sunshine/
+    Description: Sunshine parsonal protfolio.
+    Author: ShiningTheme
+    Author URI: https://themeforest.net/user/shiningtheme
+    Version: 1.0
+--------------------------------------------------*/
+/**!----------------------------------------------------
+	You can put your custom css code here: 
+-------------------------------------------------------!*/
+@font-face {
+  font-family: 'broken15';
+  src: url("fonts/Broken/broken15.eot");
+  src: url("fonts/Broken/broken15.eot?#iefix") format("embedded-opentype"), url("fonts/Broken/broken15.woff2") format("woff2"), url("fonts/Broken/broken15.woff") format("woff"), url("fonts/Broken/broken15.ttf") format("truetype"), url("fonts/Broken/broken15.svg#broken_15regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'destroy';
+  src: url("fonts/Destroy/destroy.eot");
+  src: url("fonts/Destroy/destroy.eot?#iefix") format("embedded-opentype"), url("fonts/Destroy/destroy.woff2") format("woff2"), url("fonts/Destroy/destroy.woff") format("woff"), url("fonts/Destroy/destroy.ttf") format("truetype"), url("fonts/Destroy/destroy.svg#destroy") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.sg_hero-container {
+  background-color: #000; }
+  .sg_hero-container .sg_hero_image {
+    width: 60%;
+    margin: auto;
+    display: block; }
+
+.spinner4 {
+  background: url(img/sg_preloader.png) no-repeat center center;
+  width: 100px;
+  height: 100px;
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain; }
