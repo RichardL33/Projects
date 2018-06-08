@@ -1,5 +1,5 @@
 {
-  "name": "TorgBox_Frontend",
+  "name": "GetRichToThis",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,5 +12,8 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-watch": "^4.3.11",
     "run-sequence": "^2.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
