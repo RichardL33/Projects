@@ -136,7 +136,7 @@ jQuery(document).ready(function ($) {
              // countdown timer  activation js file
         if ($('#example').length > 0){
            $('#example').countdown({
-                date: '02/11/2018 23:59:59',
+                date: '02/11/2019 23:59:59',
                 offset: -8,
                 day: 'Day',
                 days: 'Days'

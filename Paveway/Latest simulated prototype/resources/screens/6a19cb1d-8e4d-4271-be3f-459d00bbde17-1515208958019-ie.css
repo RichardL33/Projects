@@ -1,0 +1,23 @@
+#s-6a19cb1d-8e4d-4271-be3f-459d00bbde17 #s-Input_9 {
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=99);
+  filter: alpha(opacity=99);
+}
+#s-6a19cb1d-8e4d-4271-be3f-459d00bbde17 #s-Input_3 {
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=99);
+  filter: alpha(opacity=99);
+}
+#s-6a19cb1d-8e4d-4271-be3f-459d00bbde17 #s-Input_8 {
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=99);
+  filter: alpha(opacity=99);
+}
+#jim-container .ui-page {
+  overflow-x: hidden;
+}
+.non_jim_mobile #simulation {
+  overflow-x: hidden;
+}
+#s-6a19cb1d-8e4d-4271-be3f-459d00bbde17 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

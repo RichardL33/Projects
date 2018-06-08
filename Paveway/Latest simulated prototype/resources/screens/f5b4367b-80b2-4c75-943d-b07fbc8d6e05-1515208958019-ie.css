@@ -1,0 +1,26 @@
+#s-f5b4367b-80b2-4c75-943d-b07fbc8d6e05 #s-Text_1 {
+  border-top-width: 5px;
+  border-top-style: solid;
+  border-top-color: #000000;
+  border-right-width: 5px;
+  border-right-style: solid;
+  border-right-color: #000000;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #000000;
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #000000;
+  -ms-transform: rotate(0.0deg);
+}
+#jim-container .ui-page {
+  overflow-x: hidden;
+}
+.non_jim_mobile #simulation {
+  overflow-x: hidden;
+}
+#s-f5b4367b-80b2-4c75-943d-b07fbc8d6e05 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}
