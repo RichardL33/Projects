@@ -7,7 +7,7 @@
 	$headers .= "From: ".$_POST['email']."\r\n";
 
 	if (!isset($_POST['subject'])) {
-		$subject = "Contact form message"; // Enter your subject here
+		$subject = "Get Rich"; // Enter your subject here
 	} else {
 		$subject = $_POST['subject'];
 	}
