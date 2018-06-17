@@ -8,6 +8,8 @@
   <meta name="author" content="">
   <title>Richard Lee</title>
   <link rel="stylesheet" href="assets/css/color.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/slick-theme.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
   <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
   <style>
@@ -80,6 +82,35 @@
       }
       .tags li {
         margin-bottom: 5px;
+      }
+      .portfolio-slider {
+        opacity: 0 !important;
+        visibility: hidden !important;
+      }
+      .portfolio-slider.show {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
+      .slick-dotted.slick-slider {
+          margin-bottom: 50px;
+      }
+      @media screen and (min-width: 992px) {
+        .slick-prev,
+        .slick-next {
+          display: block !important;
+        }
+        .slick-prev {
+            left: -35px;
+        }
+        .slick-prev:before,
+        .slick-next:before {
+          color: #969696;
+          font-size: 30px;
+        }
       }
   </style>
 </head>
@@ -197,7 +228,7 @@
       <div class="col-md-10">
         <h2 id="resume_header" class="section__title">Resume_</h2>
         <p class="section__description">
-          I would love the opportunity to meet you in person and discuss how my development skills can help your company by providing an enhanced experience.
+          I would love the opportunity to meet you in person and discuss how my development skills can help in the branding of your company.
 <!--           Lorem ipsum dolor sit amet, <i><b>communication</b></i> adipisicing elit, <i><b>helpful</b></i> eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <i><b>sence of
           humour</b></i> ullamco laboris nisi ut <i><b>honest</b></i> ea commodo consequat. Duis aute irure dolor in
@@ -499,6 +530,7 @@
             <li>jQuery</li>
             <li>bootstrap 3</li>
             <li>grunt</li>
+            <li>github</li>
             <li>Sitecore</li>
           </ul>
           <div class="project-card__link">
@@ -523,6 +555,7 @@
             <li>JavaScript</li>
             <li>jQuery</li>
             <li>gulp</li>
+            <li>github</li>
             <li>Drupal</li>
           </ul>
           <div class="project-card__link">
@@ -552,6 +585,8 @@
           <li>JavaScript</li>
           <li>jQuery</li>
           <li>grunt</li>
+          <li>github</li>
+          <li>Google Tag Manager</li>
           <li>AEM</li>
         </ul>
         <div class="project-card__link">
@@ -578,6 +613,7 @@
           <li>JavaScript</li>
           <li>jQuery</li>
           <li>grunt</li>
+          <li>github</li>
           <li>Drupal</li>
         </ul>
         <div class="project-card__link">
@@ -810,9 +846,14 @@
       </div>
       <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
         <p class="portfolio-modal__title">Childrens Healthcare of Atlanta</p>
-        <img class="portfolio-modal__img" src="assets/img/img_project_1_mono-choa.jpg" alt="modal_img">
+        <div class="portfolio-slider">
+          <img class="portfolio-modal__img" src="assets/img/choa/img_project_1_choa-1.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/choa/img_project_1_choa-2.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/choa/img_project_1_choa-3.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/choa/img_project_1_choa-4.jpg" alt="modal_img">
+        </div>
         <p class="portfolio-modal__description"> 
-          Children's Heatlhcare of Atlanta desired a stronger web presence to help patients easily search for medical care. Our team focused on the core user experience, seamlessly connecting parents and doctors. We developed a fully responsive web application using Bootstrap in an agile, itertative environment. The front end code was integrated into their existing Sitecore platform with the assistance of our (rockstar) back end team. We knew the redesign was successful when the conversations for donations increased by 28% within the first 2 months of launch.
+          Children's Heatlhcare of Atlanta desired a stronger web presence to help patients easily search for medical care. Our team focused on the core user experience, seamlessly connecting parents and doctors. We developed a fully responsive web application using Bootstrap in an agile, itertative environment. The front end code was integrated into their existing Sitecore platform with the assistance of our (rockstar) back end team. We knew the redesign was successful when the conversations for donations increased by 8% within the first 2 months of launch.
         </p>
         <div class="portfolio-modal__link">
           <a href="https://www.choa.org" target="_blank" class="">www.choa.org</a>
@@ -827,6 +868,7 @@
             <li>jQuery</li>
             <li>bootstrap 3</li>
             <li>grunt</li>
+            <li>github</li>
             <li>Sitecore</li>
           </ul>
         </div>
@@ -845,7 +887,12 @@
       </div>
       <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
         <p class="portfolio-modal__title">PGA</p>
-        <img class="portfolio-modal__img" src="assets/img/img_project_2_mono-pga.jpg" alt="modal_img">
+        <div class="portfolio-slider">
+          <img class="portfolio-modal__img" src="assets/img/pga/img_project_2_pga-1.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/pga/img_project_2_pga-2.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/pga/img_project_2_pga-3.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/pga/img_project_2_pga-4.jpg" alt="modal_img">
+        </div>
         <p class="portfolio-modal__description">
           The Professional Golfers' Association of America needed to expand and enhance the employment experience on their existing Drupal platform. Our team restructured the employment portal to create a frictionless, simple process for job applicants. Working closely with the back end team, we developed dynamic templates and pages by using Scrum methodology and test driven development. 
         </p>
@@ -861,6 +908,7 @@
             <li>JavaScript</li>
             <li>jQuery</li>
             <li>gulp</li>
+            <li>github</li>
             <li>Drupal</li>
           </ul>
         </div>
@@ -879,7 +927,12 @@
       </div>
       <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
         <p class="portfolio-modal__title">Nissan &amp; Infiniti USA</p>
-        <img class="portfolio-modal__img" src="assets/img/img_project_3_mono-nissan.jpg" alt="modal_img">
+        <div class="portfolio-slider">
+          <img class="portfolio-modal__img" src="assets/img/nissan/img_project_3_nissan-1.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/nissan/img_project_3_nissan-2.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/nissan/img_project_3_nissan-3.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/nissan/img_project_3_nissan-4.jpg" alt="modal_img">
+        </div>
         <p class="portfolio-modal__description">
           We were responsible for the Enterprise Content & Platform Strategy and CMS implementation, leading Nissan and INFINITI’s migration to Adobe® Experience Manager. We also developed cross brand components for third party application integration. On April of 2018, the North American rollout for both brands significantly increased pre-owned and commercial vehicle sales.
         </p>
@@ -896,6 +949,8 @@
             <li>JavaScript</li>
             <li>jQuery</li>
             <li>grunt</li>
+            <li>github</li>
+            <li>Google Tag Manager</li>
             <li>AEM</li>
           </ul>
         </div>
@@ -914,14 +969,16 @@
       </div>
       <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
         <p class="portfolio-modal__title">Scotts (Ortho, Miracle-Gro, Tomcat, Roundup)</p>
-        <img class="portfolio-modal__img" src="assets/img/img_project_4_mono-scotts.jpg" alt="modal_img">
+        <div class="portfolio-slider">
+          <img class="portfolio-modal__img" src="assets/img/scotts/img_project_4_scotts-1.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/scotts/img_project_4_scotts-2.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/scotts/img_project_4_scotts-3.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/scotts/img_project_4_scotts-4.jpg" alt="modal_img">
+          <img class="portfolio-modal__img" src="assets/img/scotts/img_project_4_scotts-5.jpg" alt="modal_img">
+        </div>
         <p class="portfolio-modal__description">
-          We helped Scotts and its industry-leading brands (Ortho, Miracle-Gro, Tomcat, Roundup) create dynamic Drupal page templates and components for their seasonal products. As a technical lead, I managed the front end development team across multiple agencies while working with client side marketing and IT departments. I effectively communicated project requests and proactively reported issues, progress, and recommendations to the supervisor and project leaders. I also provided mentorship to fellow developers and support for QA team.
-
-
-          More exciting news –  there have already been increases in product page views from our newly launched article pages.
-The client shared at the Monthly Performance Review with the brands that “In 2017 the number of users who entered through an article page and then in the same visit ended up viewing a product page was about 19%. Since the launch of the new article pages the same situation resulted in 28% of users viewing a product page. Or an increase of 9%.”
-Hopefully these numbers continue to climb as well as the clicks on ‘Add to Cart’
+          We helped Scotts and its industry-leading brands (Ortho, Miracle-Gro, Tomcat, Roundup) create dynamic Drupal page templates and components for their seasonal products. As a technical lead, I managed the front end development team across multiple agencies while working with client side marketing and IT departments. I effectively communicated project requests and proactively reported issues, progress, and recommendations to the supervisor and project leaders. I also provided mentorship to fellow developers and support for QA team.<br><br>
+          The Monthly Performance Review reported a 19% increase in product and article page views within the first month of launch.
         </p>
         <div class="portfolio-modal__link">
           <a href="https://www.scotts.com" target="_blank" class="">www.scotts.com</a><span>,</span>
@@ -937,6 +994,7 @@ Hopefully these numbers continue to climb as well as the clicks on ‘Add to Car
             <li>JavaScript</li>
             <li>jQuery</li>
             <li>grunt</li>
+            <li>github</li>
             <li>Drupal</li>
           </ul>
         </div>
@@ -960,11 +1018,31 @@ Hopefully these numbers continue to climb as well as the clicks on ‘Add to Car
   <script src="assets/js/mbclicker.min.js"></script>
   <script src="assets/js/site-btn.js"></script>
   <script src="assets/js/style-switcher.js"></script>
+  <script src="assets/js/slick.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
+
       $(".project-card__link a, .project-card__description a").click(function(event){
           event.stopPropagation();
       });
+
+      $('.row.project-card').on('click',function(){
+        var a = $(this).attr('data-target');
+        setTimeout(function(){
+          $(a).find('.portfolio-slider').slick({
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true
+          });
+        }, 200);
+        $('.portfolio-slider').addClass('show');
+      });
+        
     })
   </script>
 </body>
