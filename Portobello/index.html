@@ -834,8 +834,8 @@
               </div>
               <button class="site-btn site-btn--form" type="submit" value="Send">Send</button>
             </form>
-            <!-- <div class="email-confirmation"><h1>Thank you. Your email has been sent. Hope you have a great day!</h1></div> -->
           </div>
+          <div class="email-confirmation"><h1>Thank you. Your email has been sent. Hope you have a great day!</h1></div>
           <div class="footer">
             <p>© 2018 Richard Lee. All Rights Reserved</p>
           </div>
@@ -1051,14 +1051,6 @@
           });
         }, 200);
         $('.portfolio-slider').addClass('show');
-      });
-
-      $(".site-btn.site-btn--form").click(function(){
-          $.post("mail.php", $(".js-form").serialize(), function(data){
-               //this is a callback function, when the AJAX calls ends anything 
-               //echoed by mail.php goes into the data variable it receives.
-               console.log("Get It!");
-          });
       });
         
     })

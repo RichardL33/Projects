@@ -44,11 +44,12 @@ function submitForm(e, formName) {
         url: 'mail.php',
         data: formData,
         success: function () {
-            console.log('success');
-            //...
+            console.log('email success');
+            $('.email-confirmation').show();
+            $('.contacts__form').hide();
         },
         error: function () {
-            console.log('error');
+            console.log('email error');
             //...
         }
     });
