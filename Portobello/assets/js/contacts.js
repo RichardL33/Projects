@@ -44,9 +44,16 @@ function submitForm(e, formName) {
         url: 'mail.php',
         data: formData,
         success: function () {
-            console.log('email success');
             $('.email-confirmation').show();
-            $('.contacts__form').hide();
+            $('.contacts__form').css({
+                'visibility':'hidden',
+                'opacity':'0',
+                'max-height':'200px'
+            });
+            setTimeout(function(){
+                $('.contacts__form, .email-confirmation').removeAttr('style');
+                $('.contacts__form input, .contacts__form textarea').val('');
+            }, 3000);
         },
         error: function () {
             console.log('email error');
