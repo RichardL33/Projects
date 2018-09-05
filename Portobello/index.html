@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Richard Lee</title>
+  <script type="text/javascript" src="assets/js/vue-2.5.17.js"></script>
   <link rel="stylesheet" href="assets/css/color.css">
   <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/slick-theme.css">
@@ -207,182 +208,24 @@
     </div> -->
     <div class="row section__resume progress-list js-progress-list">
       <div class="col-md-12">
-        <!-- <h3 class="progress-list__title">general skills</h3> -->
+        <h3 class="progress-list__title">general skills</h3>
       </div>
+      
       <div class="col-md-5 mr-auto">
-        <div class="progress-list__skill">
+
+        <div class="progress-list__skill" v-for="progression in progress">
           <p>
-            <!-- <span class="progress-list__skill-title">html5</span> -->
-            <span class="progress-list__skill-value">80%</span>
+            <span class="progress-list__skill-title">{{ progression.skill }}</span>
+            <span class="progress-list__skill-value">{{ progression.progress }}%</span>
           </p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" >
+            <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="progression.progress" aria-valuemin="0" aria-valuemax="100" >
             </div>
           </div>
         </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">css3</span> -->
-            <span class="progress-list__skill-value">80%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">sass/scss</span> -->
-            <span class="progress-list__skill-value">90%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">javascript</span> -->
-            <span class="progress-list__skill-value">90%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">jquery</span> -->
-            <span class="progress-list__skill-value">90%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">grunt.js</span> -->
-            <span class="progress-list__skill-value">90%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">gulp.js</span> -->
-            <span class="progress-list__skill-value">90%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">react.js</span> -->
-            <span class="progress-list__skill-value">10%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">angular.js</span> -->
-            <span class="progress-list__skill-value">10%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
+
       </div>
-      <div class="col-md-5 mr-auto">
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">bootstrap 3</span> -->
-            <span class="progress-list__skill-value">80%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">wordpress</span> -->
-            <span class="progress-list__skill-value">70%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">drupal</span> -->
-            <span class="progress-list__skill-value">50%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">git</span> -->
-            <span class="progress-list__skill-value">90%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">sketch</span> -->
-            <span class="progress-list__skill-value">70%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">adobe photoshop</span> -->
-            <span class="progress-list__skill-value">80%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">adobe illustrator</span> -->
-            <span class="progress-list__skill-value">70%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <!-- <span class="progress-list__skill-title">adobe after effects</span> -->
-            <span class="progress-list__skill-value">70%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </section>
 <!--Resume-->
@@ -752,5 +595,6 @@
   <script src="assets/js/style-switcher.js"></script>
   <script src="assets/js/slick.min.js"></script>
   <script src="assets/js/main.js" type="text/javascript"></script>
+  <script type="text/javascript" src="assets/js/vue-app.js"></script>
 </body>
 </html>

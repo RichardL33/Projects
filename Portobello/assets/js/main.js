@@ -1,7 +1,9 @@
 $(document).ready(function(){
+
   $('.project-card__link a, .project-card__description a').click(function(event){
       event.stopPropagation();
   });
+
   $('.row.project-card').on('click',function(){
     var a = $(this).attr('data-target');
     var b = $(a).find('.portfolio-slider')
@@ -27,4 +29,5 @@ $(document).ready(function(){
       });
     }, 200);
   });
+
 })
