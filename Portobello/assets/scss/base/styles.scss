@@ -1,72 +1,83 @@
 .primary_btn {
   display: block;
   margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .primary_btn {
-    display: inline-block;
-    margin-bottom: 0px;
+  @media screen and (min-width: 768px) {
+      display: inline-block;
+      margin-bottom: 0px;
   }
 }
+
 .secondary_btn {
   border: 3px solid #669ed5;
   background-color: #ffffff !important;
   color: #669ed5 !important;
   line-height: 14px;
   display: block;
-}
-@media screen and (min-width: 768px) {
-  .secondary_btn {
-    margin-left: 15px;
-    display: inline-block;
+  @media screen and (min-width: 768px) {
+      margin-left: 15px;
+      display: inline-block;
   }
 }
+
 .secondary_btn:hover {
   border: 3px solid #669ed5;
   background-color: #669ed5 !important;
   color: #ffffff !important;
 }
+
 .main-header:before,
 .background:before {
   background: linear-gradient(54deg,rgba(164, 164, 164, 0.95) 34%,hsla(209, 58%, 32%, 0.95) 100%);
 }
+
 .site-btn,
 .site-btn:focus,
 .site-btn:hover {
   background-color: #669ed5;
 }
+
 .resume-list .resume-list__block-title {
   color: #669ed5;
 }
+
 .resume-list .resume-list__block {
   border-left: 2px solid #669ed5;
 }
+
 .resume-list .resume-list__block:before {
   border: 2px solid #669ed5;
 }
+
 .progress-list .progress .progress-bar {
   background-color: #669ed5;
 }
+
 .mobile-menu .mobile-menu__wrapper li a {
   font-size: 20px;
 }
+
 button.menu__mobile-button .fa.fa-bars:before {
   font-size: 30px;
 }
+
 .mobile-menu__close .mdi-close:before {
     font-size: 40px;
 }
+
 .project-card .project-card__link {
   text-align: right;
 }
+
 .project-card .project-card__link a {
   font-size: 17px;
   display: block;
   padding-bottom: 15px;
 }
+
 .project-card .project-card__link > span {
   display: none;
 }
+
 @media screen and (min-width: 992px) {
   .project-card .project-card__link > a {
     font-size: 14px;
@@ -77,26 +88,32 @@ button.menu__mobile-button .fa.fa-bars:before {
     display: inline-block;
   }
 }
+
 .portfolio-modal .modal-header .close {
   right: 20px;
   top: 0px;
 }
+
 .portfolio-modal .modal-header .close span {
   font-size: 40px;
 }
+
 @media screen and (min-width: 992px) {
   .portfolio-modal .modal-header .close {
     right: 30px;
     top: 10px;
   }
 }
+
 .project-card .project-card__img {
   background-color: #e9e9e9;
 }
+
 .project-card.nissan .project-card__img img,
 .project-card.scotts .project-card__img img {
     object-fit: contain;
 }
+
 .portfolio-cards a,
 .portfolio-cards a:focus,
 .portfolio-cards a:hover, 
@@ -108,32 +125,40 @@ button.menu__mobile-button .fa.fa-bars:before {
 .menu.menu--active .menu__wrapper a:hover {
   color: #669ed5;
 }
+
 #contact.container.section a,
 #contact.container.section a:focus,
 #contact.container.section a:hover,
 #contact.container.section a a:active {
   color: #ffffff !important;
 }
+
 .contacts .contacts__social a {
   text-decoration: none;
 }
+
 .contacts .contacts__social a:hover {
   text-decoration: underline !important;
   color: #669ed5 !important;
   background-color: transparent; 
 }
+
 .site-btn.site-btn--form:hover {
   background-color: #72a5d7 !important;
 }
+
 .menu.menu--active .menu__wrapper a:after {
   background: #669ed5 !important; 
 }
+
 .style-switcher {
   display: none !important;
 }
+
 .tags li {
   margin-bottom: 5px;
 }
+
 /*      .portfolio-slider {
   opacity: 0 !important;
   visibility: hidden !important;
@@ -142,13 +167,16 @@ button.menu__mobile-button .fa.fa-bars:before {
   opacity: 1 !important;
   visibility: visible !important;
 }*/
+
 .slick-prev,
 .slick-next {
   display: none !important;
 }
+
 .slick-dotted.slick-slider {
     margin-bottom: 50px;
 }
+
 @media screen and (min-width: 992px) {
   .slick-prev,
   .slick-next {
@@ -163,9 +191,11 @@ button.menu__mobile-button .fa.fa-bars:before {
     font-size: 30px;
   }
 }
+
 #contact .contact-list dd {
   padding-left: 75px;
 }
+
 .email-confirmation {
   display: none;
   position: absolute;
@@ -176,14 +206,13 @@ button.menu__mobile-button .fa.fa-bars:before {
   width: 100%;
   height: 100%;
   padding: 0;
-}
-@media screen and (min-width: 768px) {
-  .email-confirmation {
-    padding: 0 0 0 30px;
-    top: 0;
-    left: 0;
+  @media screen and (min-width: 768px) {
+      padding: 0 0 0 30px;
+      top: 0;
+      left: 0;
   }
 }
+
 .email-confirmation h1 {
   font-size: 23px;
   font-family: Roboto Mono,monospace;
@@ -192,9 +221,7 @@ button.menu__mobile-button .fa.fa-bars:before {
   margin: 0;
   line-height: 32px;
   text-align: left;
-}
-@media screen and (min-width: 768px) {
-  .email-confirmation h1 {
-    text-align: center;
+  @media screen and (min-width: 768px) {
+      text-align: center;
   }
 }
