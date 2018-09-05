@@ -7,10 +7,21 @@ const autoprefixer = require('gulp-autoprefixer');
 const notify = require('gulp-notify');
 const cssnano = require('gulp-cssnano');
 const plumber = require('gulp-plumber');
+const browserSync = require('browser-sync').create();
 
 const scssFiles = ['./assets/scss/**/*.scss'];
 const scssMain = ['./assets/scss/main.scss'];
 const pathStyleDest = './assets/css';
+
+const jsFiles = ['./assets/js/*.js'];
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
 
 // SASS
 gulp.task('style', function () {
@@ -21,7 +32,8 @@ gulp.task('style', function () {
       .pipe(autoprefixer('last 4 version'))
     .pipe(sourcemaps.write())
     .on('error', onError)
-    .pipe(gulp.dest(pathStyleDest));
+    .pipe(gulp.dest(pathStyleDest))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('style-build', function () {
@@ -36,9 +48,15 @@ gulp.task('style-build', function () {
 
 // Watcher
 gulp.task('watch', () => {
+  browserSync.init({
+      server: './'
+  });
   gulp.watch(scssFiles, function(){
     runSequence('style', ['notify']);
   });
+  gulp.watch(scssFiles, ['style']);
+  gulp.watch('*.html').on('change', browserSync.reload);
+  gulp.watch(jsFiles).on('change', browserSync.reload);
 });
 
 // Build for prod
