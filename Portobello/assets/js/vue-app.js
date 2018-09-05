@@ -1,4 +1,4 @@
-var skillsets = [
+var skilltrack = [
 	{ skill: 'html5', progress: 80 },
 	{ skill: 'css3', progress: 80 },
 	{ skill: 'sass/scss', progress: 90 },
@@ -19,13 +19,68 @@ var skillsets = [
 	{ skill: 'adobe after effects', progress: 60 }
 ];
 
+var employment = [
+	{
+		title: 'Senior Front End Developer', 
+		company: 'Digitas - North America', 
+		date: 'Nov 2017 - present'
+	},
+	{
+		title: 'Creative Engineer', 
+		company: 'Digitas - North America', 
+		date: 'June 2015 - Nov 2017'
+	},
+	{
+		title: 'Creative Developer', 
+		company: 'Vert', 
+		date: 'Feb 2015 - June 2015'
+	},
+	{
+		title: 'Front End Developer', 
+		company: 'HeavyDuty Branding (Formally Hothead Studios)', 
+		date: 'Feb 2015 - Mar 2015'
+	}
+];
+
+var education = [
+	{
+		school: 'General Assembly',
+		date: '2017',
+		cert: 'Certification in Javascript'
+	},
+	{
+		school: 'General Assembly',
+		date: '2016',
+		cert: 'Certification in Visual Design, UX/UI Design'
+	},
+	{
+		school: 'The Creative Circus',
+		date: '2013 - 2015',
+		cert: 'Graduate in Interactive Development'
+	}
+];
+
+var nonProfit = [
+	{
+		company: '48 in 48',
+		date: 'Oct 2017'
+	},
+	{
+		company: '48 in 48',
+		date: 'Oct 2015'
+	}
+];
+
 $(document).ready(function(){
 	new Vue({
 	 el: '#resume',
 	  data: {
-	    progress: skillsets
+	    progress: skilltrack,
+	    experience: employment,
+	    education: education,
+	    extras: nonProfit
 	  },
-	  mounted: function() {
+	  mounted() {
 	  		var postsArr = new Array(),
 	  		    $postsList = $('div.col-md-5.mr-auto');
 

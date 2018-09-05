@@ -126,7 +126,7 @@
 
 <!--Resume-->
   <section id="resume" class="container section">
-    <!-- <div class="row">
+    <div class="row">
       <div class="col-md-10">
         <h2 id="resume_header" class="section__title">Resume_</h2>
         <p class="section__description">
@@ -135,91 +135,67 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-8 section__resume resume-list">
-        <h3 class="resume-list_title">education</h3>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">General Assembly</p>
-          <p class="resume-list__block-date">2017</p>
-          <p>
-            Certification in Javascript
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">General Assembly</p>
-          <p class="resume-list__block-date">2016</p>
-          <p>
-            Certification in Visual Design, UX/UI Design
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">The Creative Circus</p>
-          <p class="resume-list__block-date">2013 - 2015</p>
-          <p>
-            Graduate in Interactive Development
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8 section__resume resume-list">
+
+      <div class="col-12 col-sm-12 col-md-6 section__resume resume-list">
         <h3 class="resume-list_title">employment</h3>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Digitas - North America</p>
-          <p class="resume-list__block-date">Nov 2017 - present</p>
-          <p>
-            Senior Front End Developer
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Digitas - North America</p>
-          <p class="resume-list__block-date">June 2015 - Nov 2017</p>
-          <p>
-            Creative Engineer
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Vert</p>
-          <p class="resume-list__block-date">Feb 2015 - June 2015</p>
-          <p>
-            Creative Developer
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">HeavyDuty Branding (Formally Hothead Studios)</p>
-          <p class="resume-list__block-date">Feb 2015 - Mar 2015</p>
-          <p>
-            Front End Developer
-          </p>
+        <div class="resume-list__block" v-for="history in experience">
+          <p class="resume-list__block-title">{{ history.company }}</p>
+          <p class="resume-list__block-date">{{ history.date }}</p>
+          <p>{{ history.title }}</p>
         </div>
       </div>
+
+      <div class="col-12 col-sm-12 col-md-6 section__resume resume-list">
+        <h3 class="resume-list_title">education</h3>
+        <div class="resume-list__block" v-for="edu in education">
+          <p class="resume-list__block-title">{{ edu.school }}</p>
+          <p class="resume-list__block-date">{{ edu.date }}</p>
+          <p>{{ edu.cert }}</p>
+        </div>
+      </div>
+
+
     </div>
+
+
+
+    <div class="row">
+
+    </div>
+
+
+
+
+    
     <div class="row">
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">Extras</h3>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">48 in 48</p>
-          <p class="resume-list__block-date">Oct 2017</p>
+
+        <div class="resume-list__block" v-for="extras in extras">
+          <p class="resume-list__block-title">{{ extras.company }}</p>
+          <p class="resume-list__block-date">{{ extras.date }}</p>
         </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">48 in 48</p>
-          <p class="resume-list__block-date">Oct 2015</p>
-        </div>
+
       </div>
-    </div> -->
+    </div>
+
+
+
+
     <div class="row section__resume progress-list js-progress-list">
       <div class="col-md-12">
-        <h3 class="progress-list__title">general skills</h3>
+        <!-- <h3 class="progress-list__title">general skills</h3> -->
       </div>
       
       <div class="col-md-5 mr-auto">
 
-        <div class="progress-list__skill" v-for="progression in progress">
+        <div class="progress-list__skill" v-for="skilltrack in progress">
           <p>
-            <span class="progress-list__skill-title">{{ progression.skill }}</span>
-            <span class="progress-list__skill-value">{{ progression.progress }}%</span>
+            <span class="progress-list__skill-title">{{ skilltrack.skill }}</span>
+            <span class="progress-list__skill-value">{{ skilltrack.progress }}%</span>
           </p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="progression.progress" aria-valuemin="0" aria-valuemax="100" >
+            <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="skilltrack.progress" aria-valuemin="0" aria-valuemax="100" >
             </div>
           </div>
         </div>
