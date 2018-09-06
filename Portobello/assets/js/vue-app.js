@@ -1,3 +1,18 @@
+new Vue({
+	el: '#personal-profile',
+	data: {
+		name: 'Richard Lee',
+		title: 'frontend developer, creative engineer',
+		email: 'rich.leeroy@gmail.com',
+		phone: '17709124747',
+		city: 'Atlanta, GA',
+		social: {
+			github: 'https://github.com/richardl33',
+			linkedin: 'https://www.linkedin.com/in/richardl33/'
+		}
+	}
+});
+
 var skilltrack = [
 	{ skill: 'html5', progress: 80 },
 	{ skill: 'css3', progress: 80 },
@@ -62,18 +77,18 @@ var education = [
 
 var nonProfit = [
 	{
-		company: '48 in 48',
+		company: '48 in 48 (Atlanta, GA, USA)',
 		date: 'Oct 2017'
 	},
 	{
-		company: '48 in 48',
+		company: '48 in 48 (Atlanta, GA, USA)',
 		date: 'Oct 2015'
 	}
 ];
 
 $(document).ready(function(){
 	new Vue({
-	 el: '#resume',
+	 el: '#vue-resume',
 	  data: {
 	    progress: skilltrack,
 	    experience: employment,
